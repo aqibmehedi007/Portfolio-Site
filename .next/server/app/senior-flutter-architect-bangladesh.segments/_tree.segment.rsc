@@ -13,4 +13,4 @@
 :HL["/projects/homefoodz.png","image"]
 :HL["/projects/echo-ai.jpg","image"]
 :HL["/projects/krishok-ai.jpg","image"]
-0:{"buildId":"LeXjE7jo8kxC7qOX5UrB_","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"senior-flutter-architect-bangladesh","paramType":null,"paramKey":"senior-flutter-architect-bangladesh","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+0:{"buildId":"zLe0AorZ2bp5mEdslEccV","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"senior-flutter-architect-bangladesh","paramType":null,"paramKey":"senior-flutter-architect-bangladesh","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
