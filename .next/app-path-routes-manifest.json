@@ -18,5 +18,6 @@
   "/favicon.ico/route": "/favicon.ico",
   "/krishok-ai/page": "/krishok-ai",
   "/page": "/",
+  "/projects/[slug]/page": "/projects/[slug]",
   "/senior-flutter-architect-bangladesh/page": "/senior-flutter-architect-bangladesh"
 }

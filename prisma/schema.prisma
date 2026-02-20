@@ -25,6 +25,7 @@ model Lead {
 model Project {
   id          String   @id @default(uuid())
   title       String
+  slug        String   @unique @default("")
   category    String
   description String   @db.Text
   icon        String

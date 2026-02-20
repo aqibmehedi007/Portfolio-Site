@@ -29,10 +29,16 @@ async function main() {
     await prisma.authorityStat.deleteMany();
 
     console.log('Seeding Projects...');
-    for (const project of projectsData) {
+    for (const [index, project] of projectsData.entries()) {
+        const slug = project.title
+            .toLowerCase()
+            .replace(/[^a-z0-9\s]/g, '')
+            .trim()
+            .replace(/\s+/g, '-');
         await prisma.project.create({
             data: {
                 title: project.title,
+                slug,
                 category: project.category,
                 description: project.description,
                 icon: project.icon,
@@ -40,6 +46,7 @@ async function main() {
                 video: project.video || null,
                 link: project.link || null,
                 tags: project.tags,
+                orderIdx: index,
             },
         });
     }
