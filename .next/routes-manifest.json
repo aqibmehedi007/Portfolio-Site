@@ -82,6 +82,12 @@
       "namedRegex": "^/admin/projects(?:/)?$"
     },
     {
+      "page": "/admin/visitors",
+      "regex": "^/admin/visitors(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/visitors(?:/)?$"
+    },
+    {
       "page": "/api/blog/data",
       "regex": "^/api/blog/data(?:/)?$",
       "routeKeys": {},
@@ -92,6 +98,12 @@
       "regex": "^/api/contact(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/api/contact(?:/)?$"
+    },
+    {
+      "page": "/api/track",
+      "regex": "^/api/track(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/track(?:/)?$"
     },
     {
       "page": "/best-ai-engineer-bangladesh",
