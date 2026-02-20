@@ -72,6 +72,12 @@
       "namedRegex": "^/admin(?:/)?$"
     },
     {
+      "page": "/admin/content",
+      "regex": "^/admin/content(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/content(?:/)?$"
+    },
+    {
       "page": "/admin/leads",
       "regex": "^/admin/leads(?:/)?$",
       "routeKeys": {},

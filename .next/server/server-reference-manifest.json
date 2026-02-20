@@ -1,5 +1,35 @@
 {
   "node": {
+    "40ee1f60f81a62b83abd271e548d69a88ebada32b7": {
+      "workers": {
+        "app/admin/(dashboard)/content/page": {
+          "moduleId": 325655,
+          "async": false,
+          "exportedName": "addFaq",
+          "filename": "src/app/admin/(dashboard)/content/actions.ts"
+        }
+      },
+      "layer": {
+        "app/admin/(dashboard)/content/page": "action-browser"
+      },
+      "filename": "src/app/admin/(dashboard)/content/actions.ts",
+      "exportedName": "addFaq"
+    },
+    "40ed4ec342020c32eda93b1ef5ae538b043688595b": {
+      "workers": {
+        "app/admin/(dashboard)/content/page": {
+          "moduleId": 325655,
+          "async": false,
+          "exportedName": "deleteFaq",
+          "filename": "src/app/admin/(dashboard)/content/actions.ts"
+        }
+      },
+      "layer": {
+        "app/admin/(dashboard)/content/page": "action-browser"
+      },
+      "filename": "src/app/admin/(dashboard)/content/actions.ts",
+      "exportedName": "deleteFaq"
+    },
     "40d82cca8bc8582c297c33c0f9d1a3d2588dfa36bc": {
       "workers": {
         "app/admin/(dashboard)/projects/page": {
