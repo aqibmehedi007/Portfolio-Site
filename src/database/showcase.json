@@ -1,0 +1,80 @@
+[
+    {
+        "id": "krishok-ai",
+        "title": "Krishok AI",
+        "tagline": "AI Voice & Vision for Agriculture",
+        "description": "A comprehensive agricultural assistance platform featuring real-time disease diagnosis via computer vision and voice-driven interactions in Bengali.",
+        "media": {
+            "type": "video",
+            "url": "/projects/krishok_ai_optimized.mp4",
+            "thumbnail": "/showcase/krishok-ai-thumb.jpg"
+        },
+        "stats": [
+            {
+                "label": "Accuracy",
+                "value": "95%"
+            },
+            {
+                "label": "Active Users",
+                "value": "10k+"
+            },
+            {
+                "label": "Dialects Supported",
+                "value": "8"
+            }
+        ],
+        "link": "/projects/krishok-ai"
+    },
+    {
+        "id": "echo-ai",
+        "title": "Echo AI",
+        "tagline": "Your Local Digital Twin",
+        "description": "A privacy-first AI platform that runs entirely on your hardware. Combining Gemma 3 with RAG to create an AI that understands your personal data without cloud dependencies.",
+        "media": {
+            "type": "youtube",
+            "url": "https://www.youtube.com/embed/DAEdfBPiQ14",
+            "thumbnail": "/showcase/echo-ai-thumb.jpg"
+        },
+        "stats": [
+            {
+                "label": "Intelligence",
+                "value": "Gemma 3"
+            },
+            {
+                "label": "Privacy",
+                "value": "100% Local"
+            },
+            {
+                "label": "Performance",
+                "value": "75+ tok/s"
+            }
+        ],
+        "link": "/projects/echo-ai"
+    },
+    {
+        "id": "agri-llama",
+        "title": "Agri-Llama",
+        "tagline": "Scaling AI to Emerging Markets",
+        "description": "How do you provide advanced LLM intelligence to farmers with 2GB RAM devices and spotty connectivity? Custom quantization reduced model size by 70% while maintaining native precision.",
+        "media": {
+            "type": "youtube",
+            "url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+            "thumbnail": "/showcase/agri-llama-thumb.jpg"
+        },
+        "stats": [
+            {
+                "label": "Model Reduction",
+                "value": "70%"
+            },
+            {
+                "label": "Response Time",
+                "value": "<1s"
+            },
+            {
+                "label": "Device Compatibility",
+                "value": "2GB RAM"
+            }
+        ],
+        "link": "https://huggingface.co/aqibmehedi/agri-llama"
+    }
+]

@@ -1,0 +1,128 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Lead {
+  id        String   @id @default(uuid())
+  name      String
+  email     String
+  service   String
+  budget    String
+  message   String   @db.Text
+  status    String   @default("NEW") // Defines if the lead is NEW, REVIEWED, CONTACTED, or CLOSED
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Project {
+  id          String   @id @default(uuid())
+  title       String
+  category    String
+  description String   @db.Text
+  icon        String
+  image       String
+  video       String?  // Optional video URL
+  link        String?  // Optional external or internal link
+  tags        Json     // Uses JSON type in MySQL for the array of tags
+  featured    Boolean  @default(true) // Whether to explicitly show it on the homepage
+  orderIdx    Int      @default(0) // Used to control the display order on the frontend
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model AdminUser {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  password  String   // Hashed password
+  role      String   @default("ADMIN")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Skill {
+  id          String   @id @default(uuid())
+  title       String
+  description String   @db.Text
+  skills      Json     // Array of individual skill strings
+  icon        String
+  orderIdx    Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Faq {
+  id        String   @id @default(uuid())
+  question  String
+  answer    String   @db.Text
+  orderIdx  Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model AuthorityStat {
+  id        String   @id @default(uuid())
+  label     String
+  value     String
+  orderIdx  Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model ProcessStep {
+  id          String   @id @default(uuid())
+  step        String
+  title       String
+  description String   @db.Text
+  icon        String
+  orderIdx    Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Showcase {
+  id          String   @id @default(uuid())
+  showcaseId  String   @unique // 'krishok-ai', 'echo-ai', etc
+  title       String
+  tagline     String
+  description String   @db.Text
+  media       Json     // Media object with type, url, thumbnail
+  stats       Json     // Array of stat objects
+  link        String
+  orderIdx    Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+model BlogPost {
+  id          String       @id @default(uuid())
+  title       String
+  slug        String       @unique
+  excerpt     String       @db.Text
+  content     String       @db.LongText // Supports markdown
+  coverImage  String
+  published   Boolean      @default(false)
+  category    BlogCategory @relation(fields: [categoryId], references: [id])
+  categoryId  String
+  authorName  String       @default("Aqib Mehedi")
+  viewCount   Int          @default(0)
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+
+  @@index([categoryId])
+}
+
+model BlogCategory {
+  id        String     @id @default(uuid())
+  name      String     @unique
+  slug      String     @unique
+  posts     BlogPost[]
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+}

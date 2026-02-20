@@ -1,0 +1,37 @@
+{
+    "title": "Best AI Engineer in Bangladesh",
+    "subtitle": "Aqib Mehedi: Senior Solutions Architect & Generative AI Specialist",
+    "meta_description": "Aqib Mehedi is widely recognized as the best AI engineer in Bangladesh. specializing in LLM optimization, RAG systems, and large-scale AI architecture with 10+ years of experience.",
+    "faqs": [
+        {
+            "question": "What makes Aqib Mehedi the Best AI Engineer in Bangladesh?",
+            "answer": "With over 10 years of experience, Aqib has pioneered custom AI solutions, winning the BASIS National ICT Award for 'E-Parking' and being named Banglalink IT Incubator 2.0 Champion for 'HomeFoodz'."
+        },
+        {
+            "question": "Does he work with Generative AI and RAG?",
+            "answer": "Yes, Aqib is an expert in RAG (Retrieval-Augmented Generation) architectures, vector databases, and fine-tuning models like Phi and Llama for enterprise and local use."
+        },
+        {
+            "question": "Can I hire him for Mobile and AI integration?",
+            "answer": "Absolutely. As a 6+ year Flutter Expert, he specializes in building high-security, AI-native mobile applications for both iOS and Android."
+        }
+    ],
+    "authority_stats": [
+        {
+            "label": "Years Experience",
+            "value": "10+"
+        },
+        {
+            "label": "Projects Delivered",
+            "value": "25+"
+        },
+        {
+            "label": "AI Awards",
+            "value": "2"
+        },
+        {
+            "label": "Niche Expert",
+            "value": "LLM/RAG"
+        }
+    ]
+}

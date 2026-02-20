@@ -1,0 +1,26 @@
+[
+    {
+        "step": "01",
+        "title": "Architectural Audit",
+        "description": "Deep analysis of existing infrastructure, security bottlenecks, and scalability requirements.",
+        "icon": "Search"
+    },
+    {
+        "step": "02",
+        "title": "Systems Design",
+        "description": "Crafting modular, high-performance blueprints using modern AI and mobile patterns.",
+        "icon": "Layers"
+    },
+    {
+        "step": "03",
+        "title": "Precision Execution",
+        "description": "Developing robust, clean-code implementations with a focus on security and user experience.",
+        "icon": "Code"
+    },
+    {
+        "step": "04",
+        "title": "Scale & Optimize",
+        "description": "Continuous monitoring and architectural refinement to ensure long-term performance.",
+        "icon": "TrendingUp"
+    }
+]

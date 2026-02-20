@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="022ea1d5-b737-430d-a1de-bddd4026a7f1" name="Changes" comment="[Ready to Live]">
+      <change beforePath="$PROJECT_DIR$/public/uploads/blog/0481e6bc762322c341bf8db46d9de07f.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/blog/0481e6bc762322c341bf8db46d9de07f.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/blog/08ecf7736e5119c783164ef573a36dcd.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/blog/08ecf7736e5119c783164ef573a36dcd.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/blog/09ec96cdc472b010254eadc9a917f1e3.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/blog/09ec96cdc472b010254eadc9a917f1e3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/blog/0cd69026ea5ba88a67d2fe8d1f4ed9be.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/blog/0cd69026ea5ba88a67d2fe8d1f4ed9be.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/blog/0f7e3b662cb66ea467105667bb6d0609.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/blog/0f7e3b662cb66ea467105667bb6d0609.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/blog/1337570e7472f669d27272f87da75dfa.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/blog/1337570e7472f669d27272f87da75dfa.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/blog/155a4588083652e6ba627daa29791b6e.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/blog/155a4588083652e6ba627daa29791b6e.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/blog/1f80edc7b5328b70abf240291ca0a8ab.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/blog/1f80edc7b5328b70abf240291ca0a8ab.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/blog/2146a182108f3043d1a6a176774d6ea4.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/blog/2146a182108f3043d1a6a176774d6ea4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/blog/2309506994c9e320bfebb35012cc7966.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/blog/2309506994c9e320bfebb35012cc7966.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/blog/23f504c84c6bc7845ff0b5f8f5310533.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/blog/23f504c84c6bc7845ff0b5f8f5310533.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/blog/27bef5d3263db042fe6a165287c3d4c7.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/blog/27bef5d3263db042fe6a165287c3d4c7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/blog/2b1a30e50225d7a151deb7e6f43b7715.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/blog/2b1a30e50225d7a151deb7e6f43b7715.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/blog/2c52078ff09055191e6a3b69877f2bc3.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/blog/2c52078ff09055191e6a3b69877f2bc3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/blog/2f62c2851bf5975e3cea2ba5d2d43d0d.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/blog/2f62c2851bf5975e3cea2ba5d2d43d0d.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/blog/3375b81c34ab853db9f8e7de74fc55a4.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/blog/3375b81c34ab853db9f8e7de74fc55a4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/blog/3939811ed63cda1bdde22118c092f00f.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/blog/3939811ed63cda1bdde22118c092f00f.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/blog/3b6d8471c96aceeb8b60684cf66f9300.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/blog/3b6d8471c96aceeb8b60684cf66f9300.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/blog/3bc51948b625956bdc6a635855a5a508.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/blog/3bc51948b625956bdc6a635855a5a508.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/blog/3c277b7fac55a477fad6ece922f69f0f.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/blog/3c277b7fac55a477fad6ece922f69f0f.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/blog/3c37aab41ca9921fcc1c7a221411fafe.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/blog/3c37aab41ca9921fcc1c7a221411fafe.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/blog/3dbe8371dd140cc7f36e6e93c1e342c2.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/blog/3dbe8371dd140cc7f36e6e93c1e342c2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/blog/423f6e7dd636efd95db5c894256c026e.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/blog/423f6e7dd636efd95db5c894256c026e.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/blog/428b5b7d7bd29e9f08fbe7712c168c59.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/blog/428b5b7d7bd29e9f08fbe7712c168c59.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/blog/4a4330139e901b7dfdc3179692b60ccd.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/blog/4a4330139e901b7dfdc3179692b60ccd.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/blog/4ec88516da59e5ea744db74e21574bd1.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/blog/4ec88516da59e5ea744db74e21574bd1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/blog/4f2e3641f7a23e53a4dbd396bfb127ea.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/blog/4f2e3641f7a23e53a4dbd396bfb127ea.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/blog/559d9be8d0e886caf4d97cfc49943fc7.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/blog/559d9be8d0e886caf4d97cfc49943fc7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/blog/5a77660054ccc5707233129844b05c2d.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/blog/5a77660054ccc5707233129844b05c2d.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/blog/5d57e1477a3f71fbcb135ccb68a14f64.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/blog/5d57e1477a3f71fbcb135ccb68a14f64.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/blog/5db8c3d2fc59eeaefd5dfeebc08755d5.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/blog/5db8c3d2fc59eeaefd5dfeebc08755d5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/blog/60bc773d05b3fc8a3c4d7aa986105127.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/blog/60bc773d05b3fc8a3c4d7aa986105127.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/blog/65639f3cc0179c1514806b5904bac63a.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/blog/65639f3cc0179c1514806b5904bac63a.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/blog/67125f670a80e2f145c5e9663377c1c1.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/blog/67125f670a80e2f145c5e9663377c1c1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/blog/681aeca7aaadd.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/blog/681aeca7aaadd.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/blog/681b9d49c4ecf.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/blog/681b9d49c4ecf.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/blog/6824fd18d6ab6d8f593d7102ecd22298.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/blog/6824fd18d6ab6d8f593d7102ecd22298.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/blog/71642f444a3ffd0bb5e8202237be28a6.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/blog/71642f444a3ffd0bb5e8202237be28a6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/blog/71b80f4ba66c84a9ebac510a72d57734.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/blog/71b80f4ba66c84a9ebac510a72d57734.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/blog/724ccd9d364730fa0ee4d626ae1bb381.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/blog/724ccd9d364730fa0ee4d626ae1bb381.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/blog/7717cca2d866ca2003499f81509b0fbb.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/blog/7717cca2d866ca2003499f81509b0fbb.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/blog/797149f8eec7cb921bd0233c57a302e8.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/blog/797149f8eec7cb921bd0233c57a302e8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/blog/7fed36c9efef7f8432971d2bd538504f.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/blog/7fed36c9efef7f8432971d2bd538504f.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/blog/8633a695c73c612a28d848ee482e28dc.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/blog/8633a695c73c612a28d848ee482e28dc.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/blog/86953ec4c53dcef362aac5a3bc7bdd22.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/blog/86953ec4c53dcef362aac5a3bc7bdd22.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/blog/89a289431d968126721324011cf8bbd3.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/blog/89a289431d968126721324011cf8bbd3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/blog/89b42007df2c0c428a19b42a7db04c29.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/blog/89b42007df2c0c428a19b42a7db04c29.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/blog/8da99cd27de9e5c0b0b9665b3d6c6682.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/uploads/blog/8da99cd27de9e5c0b0b9665b3d6c6682.png" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="production" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="39qE7yRBtLggh4c3Y64NmkP7r6u" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/GitHub/Portfolio-Site",
+    "settings.editor.selected.configurable": "AndroidSdkUpdater",
+    "show.migrate.to.gradle.popup": "false"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="022ea1d5-b737-430d-a1de-bddd4026a7f1" name="Changes" comment="" />
+      <created>1771415036616</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1771415036616</updated>
+    </task>
+    <task id="LOCAL-00001" summary="[Ready to Live]">
+      <option name="closed" value="true" />
+      <created>1771415104663</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1771415104663</updated>
+    </task>
+    <task id="LOCAL-00002" summary="[Ready to Live]">
+      <option name="closed" value="true" />
+      <created>1771415659471</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1771415659471</updated>
+    </task>
+    <task id="LOCAL-00003" summary="[Ready to Live]">
+      <option name="closed" value="true" />
+      <created>1771418707822</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1771418707822</updated>
+    </task>
+    <task id="LOCAL-00004" summary="[Ready to Live]">
+      <option name="closed" value="true" />
+      <created>1771418856585</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1771418856585</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="[Ready to Live]" />
+    <option name="LAST_COMMIT_MESSAGE" value="[Ready to Live]" />
+  </component>
+</project>

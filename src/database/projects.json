@@ -1,0 +1,145 @@
+[
+    {
+        "title": "Agri-Llama",
+        "category": "Deep AI & Optimization",
+        "description": "Specialized LLM optimized for Bengali agricultural queries on 2GB RAM devices. 70% size reduction with zero performance loss.",
+        "icon": "Cpu",
+        "image": "/projects/agri-llama.jpg",
+        "video": "",
+        "link": "https://huggingface.co/aqibmehedi/agri-llama",
+        "tags": [
+            "LLM",
+            "Quantization",
+            "Bengali"
+        ]
+    },
+    {
+        "title": "Krishok AI",
+        "category": "Agricultural AI",
+        "description": "AI-powered agricultural platform with Bengali voice interaction and computer vision for disease diagnosis.",
+        "icon": "MessageSquare",
+        "image": "/projects/krishok-ai.jpg",
+        "video": "",
+        "link": "/krishok-ai",
+        "tags": [
+            "AI Voice",
+            "Vision",
+            "Impact"
+        ]
+    },
+    {
+        "title": "PersonaPlex AI",
+        "category": "Speech AI",
+        "description": "Real-time speech-to-speech AI model for high-fidelity vocal interaction with LLMs.",
+        "icon": "MessageSquare",
+        "image": "/projects/personaplex.jpg",
+        "video": "",
+        "tags": [
+            "Gen AI",
+            "Voice",
+            "Python"
+        ]
+    },
+    {
+        "title": "Pocket Chef AI",
+        "category": "Computer Vision & Laravel",
+        "description": "Smart recipe management system with computer vision for ingredient recognition. Features automated deployment pipelines, secure API architecture, and AI-driven meal planning.",
+        "icon": "Zap",
+        "image": "/projects/pocket-chef.jpg",
+        "video": "",
+        "tags": [
+            "Vision",
+            "Laravel",
+            "DevOps"
+        ]
+    },
+    {
+        "title": "MChat Offline LLM",
+        "category": "On-Device AI",
+        "description": "Android application bringing local LLM capabilities to mobile using llama.cpp and Gemini Nano architectures.",
+        "icon": "Smartphone",
+        "image": "/projects/mchat.jpg",
+        "video": "",
+        "link": "https://github.com/aqibmehedi007/MChat_Offline_LLM",
+        "tags": [
+            "Local AI",
+            "Mobile",
+            "C++"
+        ]
+    },
+    {
+        "title": "Echo AI",
+        "category": "Digital Twin & RAG",
+        "description": "A local, GPU-accelerated digital twin platform combining RAG with Gemma 3 4B. Privacy-focused AI that knows you through your documents.",
+        "icon": "Activity",
+        "image": "/projects/echo-ai.jpg",
+        "video": "https://www.youtube.com/embed/DAEdfBPiQ14",
+        "tags": [
+            "RAG",
+            "Gemma 3",
+            "Local AI"
+        ]
+    },
+    {
+        "title": "Porua / Porua.org",
+        "category": "DRM & Encryption",
+        "description": "Piracy-proof eBook platform with high-level encryption and internal multi-vendor ecosystem.",
+        "icon": "Lock",
+        "image": "/projects/porua.png",
+        "video": "",
+        "tags": [
+            "Encryption",
+            "Architecture",
+            "Mobile"
+        ]
+    },
+    {
+        "title": "Danesh Exchange",
+        "category": "Fintech & Security",
+        "description": "Multi-currency banking solution for the Australian market. Implemented AES-256 encryption and root detection.",
+        "icon": "Shield",
+        "image": "/projects/danesh.jpg",
+        "tags": [
+            "Flutter",
+            "Security",
+            "Fintech"
+        ]
+    },
+    {
+        "title": "HOMEFOODZ",
+        "category": "Marketplace Architecture",
+        "description": "Banglalink IT Incubator 2.0 Champion. A scalable marketplace platform for home-based entrepreneurs to digitize their business.",
+        "icon": "Globe",
+        "image": "/projects/homefoodz.png",
+        "tags": [
+            "Marketplace",
+            "Node.js",
+            "Business"
+        ]
+    },
+    {
+        "title": "E-PARKING",
+        "category": "Marketplace & IoT",
+        "description": "BASIS National ICT Award Winner. A dual-app marketplace (User/Provider) for renting private parking spaces via QR code scanning. Turn any home or office space into a smart parking spot.",
+        "icon": "Activity",
+        "image": "/projects/e-parking.jpg",
+        "tags": [
+            "Marketplace",
+            "IoT",
+            "QR Ecosystem"
+        ]
+    },
+    {
+        "title": "A.I. Wall-E Specialist",
+        "category": "Robotics & Computer Vision",
+        "description": "A Wall-E inspired intelligent robot featuring advanced computer vision for object recognition and text-to-speech. Controlled via a secure Android app with voice commands, tilt-to-drive gyroscope navigation, and autonomous entertainment modes.",
+        "icon": "Bot",
+        "image": "/projects/surveillance-robot.jpg",
+        "video": "/projects/surveillance_robot_optimized.mp4",
+        "tags": [
+            "Computer Vision",
+            "Robotics",
+            "Android"
+        ]
+    }
+]

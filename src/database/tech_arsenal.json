@@ -1,0 +1,96 @@
+[
+    {
+        "id": "languages",
+        "title": "Core Languages",
+        "description": "Multi-paradigm mastery.",
+        "items": [
+            "Python",
+            "Dart",
+            "PHP",
+            "JavaScript",
+            "Rust"
+        ],
+        "size": "md:row-span-2 md:col-span-1",
+        "icon": "Code2",
+        "color": "amber"
+    },
+    {
+        "id": "frameworks",
+        "title": "Architectural Frameworks",
+        "description": "Production-grade backbones.",
+        "items": [
+            "Flutter",
+            "Laravel",
+            "Next.js",
+            "FastAPI"
+        ],
+        "size": "md:col-span-2",
+        "icon": "Layers",
+        "color": "blue"
+    },
+    {
+        "id": "cloud",
+        "title": "Infrastructure",
+        "description": "Global scale backbones.",
+        "items": [
+            "AWS",
+            "GCP",
+            "Docker"
+        ],
+        "size": "md:col-span-1",
+        "icon": "Cloud",
+        "color": "emerald"
+    },
+    {
+        "id": "ai",
+        "title": "AI & Intelligence",
+        "description": "Custom LLMs & Vision.",
+        "items": [
+            "RAG Pipelines",
+            "Vector DBs",
+            "OpenCV"
+        ],
+        "size": "md:col-span-2",
+        "icon": "Cpu",
+        "color": "purple"
+    },
+    {
+        "id": "security",
+        "title": "Security & Logic",
+        "description": "Hardened core logic.",
+        "items": [
+            "AES-256",
+            "WebSockets",
+            "Redis"
+        ],
+        "size": "md:col-span-1",
+        "icon": "ShieldCheck",
+        "color": "rose"
+    },
+    {
+        "id": "devops",
+        "title": "DevOps & CI/CD",
+        "description": "Automated lifecycles.",
+        "items": [
+            "Codemagic",
+            "GitHub Actions",
+            "Terraform"
+        ],
+        "size": "md:col-span-2",
+        "icon": "Terminal",
+        "color": "cyan"
+    },
+    {
+        "id": "tooling",
+        "title": "Expert Tooling",
+        "description": "Precision engineering.",
+        "items": [
+            "Git",
+            "Postman",
+            "Figma"
+        ],
+        "size": "md:col-span-2",
+        "icon": "Layers",
+        "color": "amber"
+    }
+]

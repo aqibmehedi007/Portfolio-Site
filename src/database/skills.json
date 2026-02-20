@@ -1,0 +1,44 @@
+[
+    {
+        "title": "AI & Solutions Architecture",
+        "description": "Architecting production-ready intelligent ecosystems. Winner of BASIS National ICT Awards for innovative AI integration.",
+        "skills": [
+            "Custom LLMs (GPT-4o, Llama 3.1, Phi-3)",
+            "Enterprise RAG Pipelines",
+            "Vector Databases (Pinecone, Qdrant)",
+            "MLOps & GPU Orchestration",
+            "Computer Vision (YOLO, OpenCV)"
+        ],
+        "icon": "Brain",
+        "color": "amber",
+        "experience": "5+ Years"
+    },
+    {
+        "title": "Enterprise Mobile Systems",
+        "description": "6+ years as a Flutter Architect. Expert in banking-grade security and cross-platform native performance.",
+        "skills": [
+            "Flutter & Dart Expert",
+            "AES-256 Security Architecture",
+            "Root & Jailbreak Detection",
+            "Custom Native Method Channels",
+            "CI/CD Mastery (Codemagic)"
+        ],
+        "icon": "Smartphone",
+        "color": "blue",
+        "experience": "6+ Years"
+    },
+    {
+        "title": "Full-Stack Cloud Infrastructure",
+        "description": "10+ years of high-scale backend engineering. Specialized in modular SaaS and sub-second latency systems.",
+        "skills": [
+            "Laravel (PHP Expert - 10y)",
+            "Node.js & Next.js Ecosystems",
+            "AWS (EC2, RDS, Lambda) & GCP",
+            "System Orchestration (Docker)",
+            "Enterprise Database Design"
+        ],
+        "icon": "Cog",
+        "color": "emerald",
+        "experience": "10+ Years"
+    }
+]
