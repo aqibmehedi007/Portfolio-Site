@@ -33,8 +33,8 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
-.env*
+# env files (Tracking staged envs)
+# .env.local and .env.production are NOT ignored to allow stage management
 
 # vercel
 .vercel

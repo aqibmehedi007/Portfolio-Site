@@ -72,6 +72,12 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 ## 🗄️ Deployment & Server Info
+
+### Environment Configuration
+The project uses separate environment files for different stages:
+- `.env.local`: Used for local development (points to `localhost:3306`).
+- `.env.production`: Used for the live site at `aqibmehedi.com`.
+
 ### CPanel Database
 - **User:** `aqibmeh1_portfolio-site`
 - **Database:** `aqibmeh1_portfolio-site`
