@@ -21,6 +21,14 @@ export default async function Home() {
     orderBy: { orderIdx: "asc" }
   });
 
+  const skills = await prisma.skill.findMany({
+    orderBy: { orderIdx: "asc" }
+  });
+
+  const processSteps = await prisma.processStep.findMany({
+    orderBy: { orderIdx: "asc" }
+  });
+
   return (
     <div className="flex flex-col min-h-screen">
       {/* Navigation */}
@@ -60,9 +68,9 @@ export default async function Home() {
       <main className="flex-1">
         <Hero />
         <TechAuthority />
-        <TechnicalArsenal />
+        <TechnicalArsenal skills={skills} />
         <MediaShowcase />
-        <ProcessMap />
+        <ProcessMap processSteps={processSteps} />
 
         {/* Project Grid Section */}
         <section id="projects" className="py-24 bg-black">

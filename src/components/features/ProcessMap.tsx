@@ -1,5 +1,16 @@
 import { Search, Layers, Code, TrendingUp } from "lucide-react";
-import PROCESS_DATA from "@/database/process.json";
+
+interface ProcessStep {
+    id: string;
+    step: string;
+    title: string;
+    description: string;
+    icon: string;
+}
+
+interface Props {
+    processSteps: ProcessStep[];
+}
 
 const ICON_MAP: Record<string, any> = {
     Search,
@@ -8,7 +19,7 @@ const ICON_MAP: Record<string, any> = {
     TrendingUp,
 };
 
-export default function ProcessMap() {
+export default function ProcessMap({ processSteps }: Props) {
     return (
         <section id="process" className="py-24 bg-graphation/20">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -24,7 +35,7 @@ export default function ProcessMap() {
                     <div className="hidden lg:block absolute top-1/2 left-0 w-full h-0.5 bg-brand-amber/10 -translate-y-1/2 -z-10"></div>
 
                     <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4">
-                        {PROCESS_DATA.map((item, idx) => {
+                        {processSteps.map((item, idx) => {
                             const Icon = ICON_MAP[item.icon] || Code;
                             return (
                                 <div key={idx} className="relative flex flex-col items-center text-center group">

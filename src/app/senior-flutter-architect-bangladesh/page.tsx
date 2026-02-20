@@ -75,6 +75,8 @@ export default async function FlutterArchitectPage() {
         orderBy: { orderIdx: "asc" }
     });
 
+    const processSteps = await prisma.processStep.findMany({ orderBy: { orderIdx: "asc" } });
+
     return (
         <div className="flex flex-col min-h-screen">
             <script
@@ -137,7 +139,7 @@ export default async function FlutterArchitectPage() {
                 </section>
 
                 <MediaShowcase />
-                <ProcessMap />
+                <ProcessMap processSteps={processSteps} />
 
                 {/* Specializations Grid */}
                 <section className="py-24 bg-black">

@@ -1,7 +1,20 @@
 "use client";
 
-import { Code2, Layers, Cloud, Cpu, ShieldCheck, Terminal, CpuIcon, CheckCircle2, Zap } from "lucide-react";
-import ARSENAL_DATA from "@/database/tech_arsenal.json";
+import { Code2, Layers, Cloud, Cpu, ShieldCheck, Terminal } from "lucide-react";
+
+interface Skill {
+    id: string;
+    title: string;
+    description: string;
+    icon: string;
+    skills: any;
+    color?: string;
+    size?: string;
+}
+
+interface Props {
+    skills: Skill[];
+}
 
 const ICON_MAP: Record<string, any> = {
     Code2: Code2,
@@ -21,7 +34,7 @@ const COLOR_MAP: Record<string, string> = {
     cyan: "text-cyan-400 border-cyan-400/20 bg-cyan-400/5"
 };
 
-export default function TechnicalArsenal() {
+export default function TechnicalArsenal({ skills }: Props) {
     return (
         <section id="arsenal" className="py-32 bg-black relative overflow-hidden">
             {/* Background noise/grid */}
@@ -42,9 +55,9 @@ export default function TechnicalArsenal() {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-6 auto-rows-[220px]">
-                    {ARSENAL_DATA.map((box: any, idx) => {
+                    {skills.map((box, idx) => {
                         const Icon = ICON_MAP[box.icon] || Code2;
-                        const colors = COLOR_MAP[box.color] || COLOR_MAP.amber;
+                        const colors = COLOR_MAP[box.color || "amber"] || COLOR_MAP.amber;
 
                         return (
                             <div
@@ -69,7 +82,7 @@ export default function TechnicalArsenal() {
                                 </div>
 
                                 <div className="relative z-10 flex flex-wrap gap-2 mt-auto">
-                                    {box.items.map((item: string, i: number) => (
+                                    {(box.skills as string[]).map((item: string, i: number) => (
                                         <div
                                             key={i}
                                             className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/5 text-[10px] font-bold text-slate-400 group-hover:text-slate-100 transition-all group-hover:bg-white/10 group-hover:border-white/10"

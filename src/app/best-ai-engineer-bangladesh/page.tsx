@@ -76,6 +76,8 @@ export default async function SEOGhostPage() {
         orderBy: { orderIdx: "asc" }
     });
 
+    const processSteps = await prisma.processStep.findMany({ orderBy: { orderIdx: "asc" } });
+
     return (
         <div className="flex flex-col min-h-screen">
             {/* Structured Data for Google */}
@@ -163,7 +165,7 @@ export default async function SEOGhostPage() {
                 </section>
 
                 <MediaShowcase />
-                <ProcessMap />
+                <ProcessMap processSteps={processSteps} />
 
                 {/* FAQ Section (Crucial for Schema.org/SEO) */}
                 <section className="py-24 bg-black" id="faq">

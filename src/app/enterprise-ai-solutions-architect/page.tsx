@@ -53,6 +53,8 @@ export default async function EnterpriseAIPage() {
         orderBy: { orderIdx: "asc" }
     });
 
+    const processSteps = await prisma.processStep.findMany({ orderBy: { orderIdx: "asc" } });
+
     return (
         <div className="flex flex-col min-h-screen">
             <script
@@ -142,7 +144,7 @@ export default async function EnterpriseAIPage() {
                 </section>
 
                 <MediaShowcase />
-                <ProcessMap />
+                <ProcessMap processSteps={processSteps} />
 
                 {/* Core Architecture Section */}
                 <section className="py-24 bg-black">
