@@ -41,13 +41,6 @@ export default function ModularPortfolio({ projects = [] }: { projects?: Project
                                 className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500 opacity-60 group-hover:opacity-100"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent" />
-
-                            {/* "View Details" on hover */}
-                            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <span className="bg-brand-amber text-black text-xs font-bold px-4 py-2 rounded-full flex items-center gap-2 shadow-lg">
-                                    View Details <ArrowRight size={14} />
-                                </span>
-                            </div>
                         </div>
 
                         <div className="p-6 flex flex-col flex-grow">
