@@ -10,6 +10,7 @@
   "/api/blog/data/route": "/api/blog/data",
   "/api/contact/route": "/api/contact",
   "/api/track/route": "/api/track",
+  "/api/upload/route": "/api/upload",
   "/best-ai-engineer-bangladesh/page": "/best-ai-engineer-bangladesh",
   "/blog/[slug]/page": "/blog/[slug]",
   "/blog/page": "/blog",

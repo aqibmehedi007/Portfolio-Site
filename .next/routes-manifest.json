@@ -106,6 +106,12 @@
       "namedRegex": "^/api/track(?:/)?$"
     },
     {
+      "page": "/api/upload",
+      "regex": "^/api/upload(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/upload(?:/)?$"
+    },
+    {
       "page": "/best-ai-engineer-bangladesh",
       "regex": "^/best\\-ai\\-engineer\\-bangladesh(?:/)?$",
       "routeKeys": {},

@@ -3,9 +3,9 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Project } from "@prisma/client";
-import { X, Save, AlertCircle } from "lucide-react";
+import { X, Save, AlertCircle, Upload, ImageIcon, Loader2 } from "lucide-react";
 import { upsertProject } from "./actions";
 
 const ProjectSchema = z.object({
@@ -13,7 +13,7 @@ const ProjectSchema = z.object({
     category: z.string().min(1, "Category is required"),
     description: z.string().min(10, "Description must be at least 10 chars"),
     icon: z.string().min(1, "Icon name is required"),
-    image: z.string().url("Must be a valid URL"),
+    image: z.string().min(1, "Image is required"),
     video: z.string().url("Must be a valid URL").optional().or(z.literal("")),
     link: z.string().url("Must be a valid URL").optional().or(z.literal("")),
     tags: z.string().min(1, "At least one tag is required"),
@@ -33,10 +33,14 @@ export default function ProjectForm({
 }) {
     const [error, setError] = useState("");
     const [loading, setLoading] = useState(false);
+    const [uploading, setUploading] = useState(false);
+    const [imagePreview, setImagePreview] = useState<string>(initialData?.image || "");
+    const fileInputRef = useRef<HTMLInputElement>(null);
 
     const {
         register,
         handleSubmit,
+        setValue,
         formState: { errors }
     } = useForm<ProjectFormValues>({
         resolver: zodResolver(ProjectSchema),
@@ -55,6 +59,24 @@ export default function ProjectForm({
             icon: "Globe"
         }
     });
+
+    const handleImageUpload = async (file: File) => {
+        setUploading(true);
+        setError("");
+        try {
+            const formData = new FormData();
+            formData.append("file", file);
+            const res = await fetch("/api/upload", { method: "POST", body: formData });
+            const data = await res.json();
+            if (!res.ok) throw new Error(data.error || "Upload failed");
+            setValue("image", data.url);
+            setImagePreview(data.url);
+        } catch (e: any) {
+            setError(e.message || "Upload failed");
+        } finally {
+            setUploading(false);
+        }
+    };
 
     const onSubmit = async (values: ProjectFormValues) => {
         setLoading(true);
@@ -141,13 +163,54 @@ export default function ProjectForm({
                             {errors.icon && <p className="text-red-400 text-xs mt-2">{errors.icon.message}</p>}
                         </div>
                         <div>
-                            <label className="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">Image URL</label>
+                            <label className="block text-xs font-bold text-slate-500 uppercase tracking-widest mb-2">Project Image</label>
+                            {/* Hidden file input */}
+                            <input
+                                ref={fileInputRef}
+                                type="file"
+                                accept="image/jpeg,image/png,image/webp,image/gif"
+                                className="hidden"
+                                onChange={(e) => {
+                                    const file = e.target.files?.[0];
+                                    if (file) handleImageUpload(file);
+                                }}
+                            />
+                            {/* Preview + Upload area */}
+                            <div
+                                onClick={() => fileInputRef.current?.click()}
+                                className="relative w-full h-32 bg-black/50 border-2 border-dashed border-white/10 rounded-lg overflow-hidden cursor-pointer hover:border-brand-amber/60 transition-all group"
+                            >
+                                {imagePreview ? (
+                                    <img src={imagePreview} alt="Preview" className="w-full h-full object-cover" />
+                                ) : (
+                                    <div className="flex flex-col items-center justify-center h-full gap-2 text-slate-500 group-hover:text-brand-amber transition-colors">
+                                        <ImageIcon size={24} />
+                                        <span className="text-xs">Click to upload image</span>
+                                    </div>
+                                )}
+                                {uploading && (
+                                    <div className="absolute inset-0 bg-black/70 flex items-center justify-center">
+                                        <Loader2 size={24} className="text-brand-amber animate-spin" />
+                                        <span className="text-white text-xs ml-2">Uploading...</span>
+                                    </div>
+                                )}
+                                {imagePreview && !uploading && (
+                                    <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2 text-white text-xs">
+                                        <Upload size={16} /> Click to change
+                                    </div>
+                                )}
+                            </div>
+                            {/* URL fallback input */}
                             <input
                                 {...register("image")}
-                                className="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-amber text-sm transition-all"
-                                placeholder="https://..."
+                                className="w-full mt-2 bg-black/30 border border-white/5 rounded-lg px-3 py-2 text-slate-400 focus:outline-none focus:border-brand-amber text-xs transition-all"
+                                placeholder="Or paste URL: https://... or /projects/image.jpg"
+                                onChange={(e) => {
+                                    register("image").onChange(e);
+                                    setImagePreview(e.target.value);
+                                }}
                             />
-                            {errors.image && <p className="text-red-400 text-xs mt-2">{errors.image.message}</p>}
+                            {errors.image && <p className="text-red-400 text-xs mt-1">{errors.image.message}</p>}
                         </div>
                     </div>
 

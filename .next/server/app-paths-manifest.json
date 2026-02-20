@@ -10,6 +10,7 @@
   "/api/blog/data/route": "app/api/blog/data/route.js",
   "/api/contact/route": "app/api/contact/route.js",
   "/api/track/route": "app/api/track/route.js",
+  "/api/upload/route": "app/api/upload/route.js",
   "/best-ai-engineer-bangladesh/page": "app/best-ai-engineer-bangladesh/page.js",
   "/blog/[slug]/page": "app/blog/[slug]/page.js",
   "/blog/page": "app/blog/page.js",
