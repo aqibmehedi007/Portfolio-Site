@@ -1,5 +1,5 @@
 var R=require("../../chunks/ssr/[turbopack]_runtime.js")("server/app/senior-flutter-architect-bangladesh/page.js")
-R.c("server/chunks/ssr/[root-of-the-server]__e48c50b1._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__22b0684c._.js")
 R.c("server/chunks/ssr/_a2d17b1b._.js")
 R.c("server/chunks/ssr/_179b126f._.js")
 R.c("server/chunks/ssr/_0efddc1b._.js")

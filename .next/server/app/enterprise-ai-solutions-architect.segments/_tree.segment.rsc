@@ -13,4 +13,4 @@
 :HL["/projects/pocket-chef.jpg","image"]
 :HL["/projects/agri-llama.jpg","image"]
 :HL["/projects/mchat.jpg","image"]
-0:{"buildId":"LnDc0ejdF_DZ3nW4jDj13","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"enterprise-ai-solutions-architect","paramType":null,"paramKey":"enterprise-ai-solutions-architect","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+0:{"buildId":"4nIaQXsJTpmLe16EGomBk","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"enterprise-ai-solutions-architect","paramType":null,"paramKey":"enterprise-ai-solutions-architect","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}

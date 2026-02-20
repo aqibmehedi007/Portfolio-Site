@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Shield, Lock, Smartphone, MessageSquare, Award, Globe, ArrowRight, Activity, Cpu, Zap, Bot } from "lucide-react";
+import { Shield, Lock, Smartphone, MessageSquare, Award, Globe, ArrowRight, Activity, Cpu, Zap, Bot, ExternalLink } from "lucide-react";
 import { Project } from "@prisma/client";
 
 const ICON_MAP: Record<string, any> = {
@@ -20,11 +20,19 @@ export default function ModularPortfolio({ projects = [] }: { projects?: Project
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, idx) => {
                 const Icon = ICON_MAP[project.icon] || Globe;
+                const slug = (project as any).slug || "";
+                const detailHref = slug ? `/projects/${slug}` : null;
+
                 return (
                     <div
                         key={idx}
-                        className="glass-card flex flex-col group hover:translate-y-[-4px] transition-all duration-300 overflow-hidden p-0"
+                        className="glass-card flex flex-col group hover:translate-y-[-4px] transition-all duration-300 overflow-hidden p-0 relative"
                     >
+                        {/* Entire card is clickable → detail page */}
+                        {detailHref && (
+                            <Link href={detailHref} className="absolute inset-0 z-10" aria-label={`View ${project.title}`} />
+                        )}
+
                         {/* Project Image */}
                         <div className="aspect-video relative overflow-hidden">
                             <img
@@ -33,6 +41,13 @@ export default function ModularPortfolio({ projects = [] }: { projects?: Project
                                 className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500 opacity-60 group-hover:opacity-100"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent" />
+
+                            {/* "View Details" on hover */}
+                            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <span className="bg-brand-amber text-black text-xs font-bold px-4 py-2 rounded-full flex items-center gap-2 shadow-lg">
+                                    View Details <ArrowRight size={14} />
+                                </span>
+                            </div>
                         </div>
 
                         <div className="p-6 flex flex-col flex-grow">
@@ -63,9 +78,29 @@ export default function ModularPortfolio({ projects = [] }: { projects?: Project
                                         </span>
                                     ))}
                                 </div>
-                                <Link href={project.link || "#"} className="text-white hover:text-brand-amber transition-colors">
-                                    <ArrowRight size={16} />
-                                </Link>
+
+                                {/* External link — z-20 sits above the card overlay so it intercepts clicks naturally */}
+                                {project.link && (
+                                    <a
+                                        href={project.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="relative z-20 text-slate-500 hover:text-brand-amber transition-colors"
+                                        title="Open external link"
+                                    >
+                                        <ExternalLink size={15} />
+                                    </a>
+                                )}
+
+                                {/* Arrow always visible → detail page */}
+                                {detailHref && (
+                                    <Link
+                                        href={detailHref}
+                                        className="relative z-20 text-white hover:text-brand-amber transition-colors"
+                                    >
+                                        <ArrowRight size={16} />
+                                    </Link>
+                                )}
                             </div>
                         </div>
                     </div>

@@ -1,6 +1,6 @@
 var R=require("../../chunks/ssr/[turbopack]_runtime.js")("server/app/best-ai-engineer-bangladesh/page.js")
 R.c("server/chunks/ssr/_3f155c86._.js")
-R.c("server/chunks/ssr/[root-of-the-server]__7cf700dc._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__e2f5311c._.js")
 R.c("server/chunks/ssr/_143e7050._.js")
 R.c("server/chunks/ssr/_0efddc1b._.js")
 R.c("server/chunks/ssr/[root-of-the-server]__3cdaedc6._.js")
