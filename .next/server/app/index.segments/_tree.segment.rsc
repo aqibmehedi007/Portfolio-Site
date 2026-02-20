@@ -1,4 +1,4 @@
-:HL["/_next/static/chunks/161a6157b6999fe3.css","style"]
+:HL["/_next/static/chunks/329c888adea59d62.css","style"]
 :HL["/_next/static/media/1b99372b3eaef0c8-s.p.758e15a8.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/profile/aqib_mehedi.jpg","image"]
@@ -13,4 +13,4 @@
 :HL["/projects/pocket-chef.jpg","image"]
 :HL["/projects/agri-llama.jpg","image"]
 :HL["/projects/mchat.jpg","image"]
-0:{"buildId":"2uBuVRUr57SY4X1bBAjN0","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+0:{"buildId":"cQQ34UfMfKV0fMSyfaQCK","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}

@@ -1,6 +1,6 @@
 var R=require("../../chunks/ssr/[turbopack]_runtime.js")("server/app/enterprise-ai-solutions-architect/page.js")
 R.c("server/chunks/ssr/_fe4e278a._.js")
-R.c("server/chunks/ssr/[root-of-the-server]__a8b9b787._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__cfaf9eaf._.js")
 R.c("server/chunks/ssr/_61f48854._.js")
 R.c("server/chunks/ssr/_0efddc1b._.js")
 R.c("server/chunks/ssr/[root-of-the-server]__5f0e3634._.js")
