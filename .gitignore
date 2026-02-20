@@ -14,8 +14,8 @@
 # testing
 /coverage
 
-# next.js
-/.next
+# next.js (Un-ignored for CPanel deployment)
+#! /.next
 
 # production
 /build

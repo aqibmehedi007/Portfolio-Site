@@ -1,0 +1,36 @@
+{
+  "node": {
+    "40d82cca8bc8582c297c33c0f9d1a3d2588dfa36bc": {
+      "workers": {
+        "app/admin/(dashboard)/projects/page": {
+          "moduleId": 94873,
+          "async": false,
+          "exportedName": "deleteProject",
+          "filename": "src/app/admin/(dashboard)/projects/actions.ts"
+        }
+      },
+      "layer": {
+        "app/admin/(dashboard)/projects/page": "action-browser"
+      },
+      "filename": "src/app/admin/(dashboard)/projects/actions.ts",
+      "exportedName": "deleteProject"
+    },
+    "60603b4a0b0e6ca2d2fb3f556d9cb0008447586d18": {
+      "workers": {
+        "app/admin/(dashboard)/projects/page": {
+          "moduleId": 94873,
+          "async": false,
+          "exportedName": "upsertProject",
+          "filename": "src/app/admin/(dashboard)/projects/actions.ts"
+        }
+      },
+      "layer": {
+        "app/admin/(dashboard)/projects/page": "action-browser"
+      },
+      "filename": "src/app/admin/(dashboard)/projects/actions.ts",
+      "exportedName": "upsertProject"
+    }
+  },
+  "edge": {},
+  "encryptionKey": "AfXvqUE1jlo8NuMEp/u3NEbcK27YwTvNsBafR1pWaKc="
+}
