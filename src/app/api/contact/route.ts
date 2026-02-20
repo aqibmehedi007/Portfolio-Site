@@ -41,7 +41,7 @@ export async function POST(req: Request) {
         // Email 1: Send notification to Admin (You)
         await transporter.sendMail({
             from: `"Portfolio Alerts" <${SMTP_USER}>`,
-            to: process.env.CONTACT_EMAIL || SMTP_USER, // Send to yourself
+            to: process.env.CONTACT_EMAIL || 'aqibcareer007@gmail.com', // Send to your primary inbox
             subject: `[New Lead] ${result.service} - ${result.name}`,
             text: `
 Name: ${result.name}
