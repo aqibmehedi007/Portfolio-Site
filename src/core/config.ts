@@ -36,6 +36,7 @@ export const SITE_CONFIG = {
         github: "https://github.com/aqibmehedi007",
         linkedin: "https://linkedin.com/in/aqibmehedi",
         email: "aqibcareer007@gmail.com",
+        whatsapp: "+8801777818880",
     },
     navLinks: [
         { label: "Expertise", href: "/#stack" },

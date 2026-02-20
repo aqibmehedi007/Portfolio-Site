@@ -3,6 +3,7 @@ import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
 import { SITE_CONFIG, SCHEMA_DATA } from "@/core/config";
 import VisitorTracker from "@/components/features/VisitorTracker";
+import WhatsAppButton from "@/components/features/WhatsAppButton";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -66,6 +67,7 @@ export default function RootLayout({
         className={`${inter.variable} ${outfit.variable} font-sans antialiased bg-black text-white`}
       >
         <VisitorTracker />
+        <WhatsAppButton />
         {children}
       </body>
     </html>
