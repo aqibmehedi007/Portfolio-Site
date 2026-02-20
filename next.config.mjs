@@ -9,10 +9,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  experimental: {
-    // Allows Turbopack and the Next.js builder to follow cPanel's node_modules symlink
-    outputFileTracingRoot: path.join(__dirname, '../../'),
-  },
+  // Allows Turbopack and the Next.js builder to follow cPanel's node_modules symlink
+  outputFileTracingRoot: path.join(__dirname, '../../'),
 };
 
 export default nextConfig;
