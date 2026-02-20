@@ -90,14 +90,22 @@ Then **RESTART** from CPanel "Setup Node.js App" dashboard.
 
 ### Updating the Live Site
 ```bash
-# Local: build and push
+# Local: build and push (MUST build locally before pushing)
 npm run build
 git add -A && git commit -m "feat: ..." && git push origin main
 
-# CPanel: pull and restart
-git fetch origin main && git reset --hard origin/main
-# → RESTART in CPanel dashboard
+# CPanel Terminal: pull, restore build, and restart server
+git pull origin main
+git checkout -- .next
+kill $(pgrep -f "node server.js")
+nohup node server.js > app.log 2>&1 &
 ```
+
+> **⚠️ Important Notes:**
+> - Always run `npm run build` **locally** before pushing. The `.next` build folder is committed to git because cPanel's Turbopack has symlink issues that prevent building on the server.
+> - **Never** run `rm -rf .next` on the server. If the `.next` folder gets deleted, restore it with `git checkout -- .next`.
+> - To check server logs: `cat app.log`
+> - To verify the server is running: `pgrep -f "node server.js"`
 
 ### Environment Variables (CPanel Node.js App)
 | Key | Value |
