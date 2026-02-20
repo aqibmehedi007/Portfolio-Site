@@ -16,6 +16,8 @@
 
 # next.js (Un-ignored for CPanel deployment)
 #! /.next
+# Exclude Turbopack dev cache (too large for GitHub)
+/.next/dev
 
 # production
 /build
