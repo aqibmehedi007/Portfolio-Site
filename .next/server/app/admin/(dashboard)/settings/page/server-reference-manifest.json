@@ -1,0 +1,20 @@
+{
+  "node": {
+    "40f9f13dcfcaa9a00e17852211d27ca0c0e8eb64e3": {
+      "workers": {
+        "app/admin/(dashboard)/settings/page": {
+          "moduleId": 5108,
+          "async": false,
+          "exportedName": "saveSettings",
+          "filename": "GitHub/Portfolio-Site/src/app/admin/(dashboard)/settings/actions.ts"
+        }
+      },
+      "layer": {
+        "app/admin/(dashboard)/settings/page": "action-browser"
+      },
+      "exportedName": "saveSettings",
+      "filename": "GitHub/Portfolio-Site/src/app/admin/(dashboard)/settings/actions.ts"
+    }
+  },
+  "edge": {}
+}

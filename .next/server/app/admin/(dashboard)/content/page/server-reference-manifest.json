@@ -1,0 +1,95 @@
+{
+  "node": {
+    "400f5ae7deb53a6b53f07f3f24e24388258a935320": {
+      "workers": {
+        "app/admin/(dashboard)/content/page": {
+          "moduleId": 434758,
+          "async": false,
+          "exportedName": "addFaq",
+          "filename": "GitHub/Portfolio-Site/src/app/admin/(dashboard)/content/actions.ts"
+        }
+      },
+      "layer": {
+        "app/admin/(dashboard)/content/page": "action-browser"
+      },
+      "exportedName": "addFaq",
+      "filename": "GitHub/Portfolio-Site/src/app/admin/(dashboard)/content/actions.ts"
+    },
+    "4088ee020ad96c7324c2c44ccfd34931b6d53c1341": {
+      "workers": {
+        "app/admin/(dashboard)/content/page": {
+          "moduleId": 434758,
+          "async": false,
+          "exportedName": "deleteFaq",
+          "filename": "GitHub/Portfolio-Site/src/app/admin/(dashboard)/content/actions.ts"
+        }
+      },
+      "layer": {
+        "app/admin/(dashboard)/content/page": "action-browser"
+      },
+      "exportedName": "deleteFaq",
+      "filename": "GitHub/Portfolio-Site/src/app/admin/(dashboard)/content/actions.ts"
+    },
+    "404df1982a54e39098c41e6804b808785b63bee563": {
+      "workers": {
+        "app/admin/(dashboard)/content/page": {
+          "moduleId": 434758,
+          "async": false,
+          "exportedName": "addSkill",
+          "filename": "GitHub/Portfolio-Site/src/app/admin/(dashboard)/content/actions.ts"
+        }
+      },
+      "layer": {
+        "app/admin/(dashboard)/content/page": "action-browser"
+      },
+      "exportedName": "addSkill",
+      "filename": "GitHub/Portfolio-Site/src/app/admin/(dashboard)/content/actions.ts"
+    },
+    "4093afa1844d333da294fb7ec2aaae5204231e52d5": {
+      "workers": {
+        "app/admin/(dashboard)/content/page": {
+          "moduleId": 434758,
+          "async": false,
+          "exportedName": "deleteSkill",
+          "filename": "GitHub/Portfolio-Site/src/app/admin/(dashboard)/content/actions.ts"
+        }
+      },
+      "layer": {
+        "app/admin/(dashboard)/content/page": "action-browser"
+      },
+      "exportedName": "deleteSkill",
+      "filename": "GitHub/Portfolio-Site/src/app/admin/(dashboard)/content/actions.ts"
+    },
+    "40e921d871ce285dc6a82601b9b1c4071c41d2594a": {
+      "workers": {
+        "app/admin/(dashboard)/content/page": {
+          "moduleId": 434758,
+          "async": false,
+          "exportedName": "addProcess",
+          "filename": "GitHub/Portfolio-Site/src/app/admin/(dashboard)/content/actions.ts"
+        }
+      },
+      "layer": {
+        "app/admin/(dashboard)/content/page": "action-browser"
+      },
+      "exportedName": "addProcess",
+      "filename": "GitHub/Portfolio-Site/src/app/admin/(dashboard)/content/actions.ts"
+    },
+    "40eac2c96fe9713f4b3ccac22ea99ce9cf1669e082": {
+      "workers": {
+        "app/admin/(dashboard)/content/page": {
+          "moduleId": 434758,
+          "async": false,
+          "exportedName": "deleteProcess",
+          "filename": "GitHub/Portfolio-Site/src/app/admin/(dashboard)/content/actions.ts"
+        }
+      },
+      "layer": {
+        "app/admin/(dashboard)/content/page": "action-browser"
+      },
+      "exportedName": "deleteProcess",
+      "filename": "GitHub/Portfolio-Site/src/app/admin/(dashboard)/content/actions.ts"
+    }
+  },
+  "edge": {}
+}
