@@ -1,0 +1,65 @@
+{
+  "node": {
+    "40572e89450c7c7d4898fe4d5c16fdbdbbde1731b8": {
+      "workers": {
+        "app/admin/(dashboard)/blogs/page": {
+          "moduleId": 63768,
+          "async": false,
+          "exportedName": "createCategory",
+          "filename": "src/app/admin/(dashboard)/blogs/actions.ts"
+        }
+      },
+      "layer": {
+        "app/admin/(dashboard)/blogs/page": "action-browser"
+      },
+      "exportedName": "createCategory",
+      "filename": "src/app/admin/(dashboard)/blogs/actions.ts"
+    },
+    "400927333b0758770f5404f5b5b90aae2149d5221c": {
+      "workers": {
+        "app/admin/(dashboard)/blogs/page": {
+          "moduleId": 63768,
+          "async": false,
+          "exportedName": "deleteCategory",
+          "filename": "src/app/admin/(dashboard)/blogs/actions.ts"
+        }
+      },
+      "layer": {
+        "app/admin/(dashboard)/blogs/page": "action-browser"
+      },
+      "exportedName": "deleteCategory",
+      "filename": "src/app/admin/(dashboard)/blogs/actions.ts"
+    },
+    "40b398e4ede97dc4d9518e0af9815e15e7fa2610c8": {
+      "workers": {
+        "app/admin/(dashboard)/blogs/page": {
+          "moduleId": 63768,
+          "async": false,
+          "exportedName": "deletePost",
+          "filename": "src/app/admin/(dashboard)/blogs/actions.ts"
+        }
+      },
+      "layer": {
+        "app/admin/(dashboard)/blogs/page": "action-browser"
+      },
+      "exportedName": "deletePost",
+      "filename": "src/app/admin/(dashboard)/blogs/actions.ts"
+    },
+    "602ae8cce88a623b21394ef3ef39462da2480b1926": {
+      "workers": {
+        "app/admin/(dashboard)/blogs/page": {
+          "moduleId": 63768,
+          "async": false,
+          "exportedName": "togglePublish",
+          "filename": "src/app/admin/(dashboard)/blogs/actions.ts"
+        }
+      },
+      "layer": {
+        "app/admin/(dashboard)/blogs/page": "action-browser"
+      },
+      "exportedName": "togglePublish",
+      "filename": "src/app/admin/(dashboard)/blogs/actions.ts"
+    }
+  },
+  "edge": {}
+}

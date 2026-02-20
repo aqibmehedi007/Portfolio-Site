@@ -47,6 +47,33 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
 }
 
 
+// Validate ../../src/app/admin/(dashboard)/blogs/edit/[id]/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/admin/blogs/edit/[id]">> = Specific
+  const handler = {} as typeof import("../../src/app/admin/(dashboard)/blogs/edit/[id]/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/admin/(dashboard)/blogs/new/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/admin/blogs/new">> = Specific
+  const handler = {} as typeof import("../../src/app/admin/(dashboard)/blogs/new/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/admin/(dashboard)/blogs/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/admin/blogs">> = Specific
+  const handler = {} as typeof import("../../src/app/admin/(dashboard)/blogs/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../src/app/admin/(dashboard)/content/page.tsx
 {
   type __IsExpected<Specific extends AppPageConfig<"/admin/content">> = Specific

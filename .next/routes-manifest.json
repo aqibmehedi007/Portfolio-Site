@@ -22,6 +22,14 @@
   },
   "dynamicRoutes": [
     {
+      "page": "/admin/blogs/edit/[id]",
+      "regex": "^/admin/blogs/edit/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/admin/blogs/edit/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
       "page": "/api/auth/[...nextauth]",
       "regex": "^/api/auth/(.+?)(?:/)?$",
       "routeKeys": {
@@ -70,6 +78,18 @@
       "regex": "^/admin(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/admin(?:/)?$"
+    },
+    {
+      "page": "/admin/blogs",
+      "regex": "^/admin/blogs(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/blogs(?:/)?$"
+    },
+    {
+      "page": "/admin/blogs/new",
+      "regex": "^/admin/blogs/new(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/blogs/new(?:/)?$"
     },
     {
       "page": "/admin/content",
