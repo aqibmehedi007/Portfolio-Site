@@ -4,6 +4,26 @@ import { getServerSession } from 'next-auth';
 import { authOptions } from '@/core/auth';
 import { revalidatePath } from 'next/cache';
 
+export async function GET() {
+    try {
+        const posts = await prisma.blogPost.findMany({
+            where: { published: true },
+            orderBy: { createdAt: 'desc' },
+            include: { category: { select: { name: true } } },
+        });
+
+        const categories = await prisma.blogCategory.findMany({
+            orderBy: { name: 'asc' },
+            include: { _count: { select: { posts: true } } },
+        });
+
+        return NextResponse.json({ posts, categories });
+    } catch (e: any) {
+        console.error("Blog Data Fetch Error:", e);
+        return NextResponse.json({ posts: [], categories: [] });
+    }
+}
+
 export async function POST(req: Request) {
     try {
         const session = await getServerSession(authOptions);
