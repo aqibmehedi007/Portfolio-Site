@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
 import { SITE_CONFIG, SCHEMA_DATA } from "@/core/config";
+import VisitorTracker from "@/components/features/VisitorTracker";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -64,6 +65,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${outfit.variable} font-sans antialiased bg-black text-white`}
       >
+        <VisitorTracker />
         {children}
       </body>
     </html>

@@ -156,6 +156,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$layout$2d$dashboard$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__LayoutDashboard$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/layout-dashboard.js [app-rsc] (ecmascript) <export default as LayoutDashboard>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$users$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__Users$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/users.js [app-rsc] (ecmascript) <export default as Users>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$folders$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__Folders$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/folders.js [app-rsc] (ecmascript) <export default as Folders>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$globe$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__Globe$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/globe.js [app-rsc] (ecmascript) <export default as Globe>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$log$2d$out$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__LogOut$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/log-out.js [app-rsc] (ecmascript) <export default as LogOut>");
 ;
 ;
@@ -230,6 +231,24 @@ async function DashboardLayout({ children }) {
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
+                                href: "/admin/visitors",
+                                className: "flex items-center gap-3 px-4 py-3 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-all text-sm font-medium tracking-wide",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$globe$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__Globe$3e$__["Globe"], {
+                                        size: 18
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/admin/(dashboard)/layout.tsx",
+                                        lineNumber: 43,
+                                        columnNumber: 25
+                                    }, this),
+                                    "Site Visitors"
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/src/app/admin/(dashboard)/layout.tsx",
+                                lineNumber: 39,
+                                columnNumber: 21
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
                                 href: "/admin/projects",
                                 className: "flex items-center gap-3 px-4 py-3 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-all text-sm font-medium tracking-wide",
                                 children: [
@@ -237,14 +256,14 @@ async function DashboardLayout({ children }) {
                                         size: 18
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/admin/(dashboard)/layout.tsx",
-                                        lineNumber: 43,
+                                        lineNumber: 50,
                                         columnNumber: 25
                                     }, this),
                                     "Project CMS"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/admin/(dashboard)/layout.tsx",
-                                lineNumber: 39,
+                                lineNumber: 46,
                                 columnNumber: 21
                             }, this)
                         ]
@@ -264,7 +283,7 @@ async function DashboardLayout({ children }) {
                                         children: session.user?.email?.[0].toUpperCase()
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/admin/(dashboard)/layout.tsx",
-                                        lineNumber: 50,
+                                        lineNumber: 57,
                                         columnNumber: 25
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -272,13 +291,13 @@ async function DashboardLayout({ children }) {
                                         children: session.user?.email
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/admin/(dashboard)/layout.tsx",
-                                        lineNumber: 53,
+                                        lineNumber: 60,
                                         columnNumber: 25
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/admin/(dashboard)/layout.tsx",
-                                lineNumber: 49,
+                                lineNumber: 56,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -289,20 +308,20 @@ async function DashboardLayout({ children }) {
                                         size: 18
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/admin/(dashboard)/layout.tsx",
-                                        lineNumber: 64,
+                                        lineNumber: 71,
                                         columnNumber: 25
                                     }, this),
                                     "Sign Out"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/admin/(dashboard)/layout.tsx",
-                                lineNumber: 60,
+                                lineNumber: 67,
                                 columnNumber: 21
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/admin/(dashboard)/layout.tsx",
-                        lineNumber: 48,
+                        lineNumber: 55,
                         columnNumber: 17
                     }, this)
                 ]
@@ -316,7 +335,7 @@ async function DashboardLayout({ children }) {
                 children: children
             }, void 0, false, {
                 fileName: "[project]/src/app/admin/(dashboard)/layout.tsx",
-                lineNumber: 71,
+                lineNumber: 78,
                 columnNumber: 13
             }, this)
         ]

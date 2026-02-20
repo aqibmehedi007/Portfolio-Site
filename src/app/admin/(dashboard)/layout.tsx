@@ -2,7 +2,7 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "@/core/auth";
 import { redirect } from "next/navigation";
 import Link from "next/link";
-import { LayoutDashboard, Users, Folders, Settings, LogOut } from "lucide-react";
+import { LayoutDashboard, Users, Folders, Globe, LogOut } from "lucide-react";
 
 export const dynamic = "force-dynamic";
 
@@ -35,6 +35,13 @@ export default async function DashboardLayout({ children }: { children: React.Re
                     >
                         <Users size={18} />
                         Leads Database
+                    </Link>
+                    <Link
+                        href="/admin/visitors"
+                        className="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-all text-sm font-medium tracking-wide"
+                    >
+                        <Globe size={18} />
+                        Site Visitors
                     </Link>
                     <Link
                         href="/admin/projects"
