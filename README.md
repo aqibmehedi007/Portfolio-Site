@@ -1,84 +1,134 @@
-# Aqib.Dev - Personal Branding & SEO Domination
+# Aqib Mehedi — AI Architect Portfolio & Ecosystem
 
-This repository contains the research, assets, and implementation for Aqib Mehedi's professional website, designed to achieve #1 search ranking for "Best AI Engineer in Bangladesh".
+**Live:** [aqibmehedi.com](https://aqibmehedi.com) · **Stack:** Next.js 16 · Prisma · MySQL · Node.js on CPanel
 
-## 🚀 The Mission
-To build the most technically advanced, AI-optimized, and performant personal brand ecosystem in Bangladesh.
-
-## 🛠 Project Structure
-- **/website**: The Next.js frontend (The SEO & Visual Engine).
-- **/docs**: Research reports, SEO blueprints, and architectural plans.
-- **/likhon**: Competitor analysis and offline archive.
-- **/my_resume**: Raw data gathering and extraction tools.
-
-## 🏗 Engineering Roadmap
-### Phase 1: The Frontline (Current)
-- Initialize Next.js project with Tailwind CSS.
-- Implement a premium, modular design system.
-- Deploy the **SEO Metadata Engine** (JSON-LD, Meta Tags, OpenGraph).
-- Focus on high-performance vitals (LCP, FID, CLS) to outrank PHP-based competition.
-
-### Phase 2: The Core (Aqib's Task)
-- Aqib will develop a custom Laravel backend for content management, leads, and analytics.
-- Integrate the Next.js frontend with the Laravel API.
-
-### Phase 3: The AI Playground
-- Integrate live AI modules (RAG, Custom LLM demos).
-- Implement real-time visitor tracking and geo-fencing.
-
-## 🎯 The Final Goal
-Rank #1 for high-intent keywords:
-- Best AI Engineer in Bangladesh
-- Top Gen AI Specialist Dhaka
-- Senior Mobile Solutions Architect Bangladesh
+The most technically advanced personal brand ecosystem by an AI/Flutter Architect in Bangladesh, engineered to dominate search rankings for high-intent keywords.
 
 ---
-*Architected with precision by Antigravity AI & Aqib Mehedi.*
 
+## 🎯 Mission
+Rank #1 for these keywords and convert every visitor into a client:
+- `Best AI Engineer Bangladesh`
+- `Senior Flutter Architect Bangladesh`
+- `Enterprise AI Solutions Architect`
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+---
 
-## Getting Started
+## 🏗 Current Architecture
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+aqibmehedi.com (Next.js 16 — Node.js on CPanel)
+│
+├── Frontend (React / Tailwind CSS)
+│   ├── Hero, Bento Grid (Arsenal), Project Showcase
+│   ├── Blog System (dynamic, DB-powered)
+│   ├── SEO Pages (/best-ai-engineer-bangladesh, /krishok-ai, etc.)
+│   └── Contact / Hire Me Form
+│
+├── Admin Panel (/admin)
+│   ├── Overview Dashboard (leads, visitors, blog, projects stats)
+│   ├── Leads Database (CRM)
+│   ├── Project CMS (with image upload)
+│   └── Site Visitors (World Map + IP Analytics)
+│
+├── Backend (Next.js API Routes)
+│   ├── /api/contact — Lead capture → MySQL
+│   ├── /api/track — Visitor tracking + Geo-IP
+│   ├── /api/upload — Image upload to /public/projects
+│   └── /api/auth — NextAuth session management
+│
+└── Database (MySQL via Prisma ORM)
+    ├── Lead, AdminUser, Project, BlogPost, BlogCategory
+    ├── Skill, ProcessStep, Showcase, Faq, AuthorityStat
+    └── Visitor (IP, device, browser, geo-coordinates)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Getting Started (Local Development)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm install
+npm run dev        # http://localhost:3000
+```
 
-## Learn More
+### Environment Files
+| File | Purpose |
+|---|---|
+| `.env.local` | Local dev — points to `localhost:3306` |
+| `.env.production` | Live server — points to CPanel MySQL |
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🌐 CPanel Deployment Guide
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### One-time Setup
+```bash
+# 1. Inside the CPanel Node.js virtual environment:
+source /home/aqibmeh1/nodevenv/portfolio-site/22/bin/activate && cd ~/portfolio-site
 
-## Deploy on Vercel
+# 2. Pull latest code
+git fetch origin main && git reset --hard origin/main
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# 3. Install dependencies
+npm install
 
-## 🗄️ Deployment & Server Info
+# 4. Generate Prisma Client
+npx prisma generate
 
-### Environment Configuration
-The project uses separate environment files for different stages:
-- `.env.local`: Used for local development (points to `localhost:3306`).
-- `.env.production`: Used for the live site at `aqibmehedi.com`.
+# 5. Create DB tables (first time only)
+npx prisma db push
 
-### CPanel Database
+# 6. Seed all data
+node scripts/seed-deploy.mjs
+
+# 7. Create admin user
+node scripts/create-admin.mjs
+```
+
+Then **RESTART** from CPanel "Setup Node.js App" dashboard.
+
+### Updating the Live Site
+```bash
+# Local: build and push
+npm run build
+git add -A && git commit -m "feat: ..." && git push origin main
+
+# CPanel: pull and restart
+git fetch origin main && git reset --hard origin/main
+# → RESTART in CPanel dashboard
+```
+
+### Environment Variables (CPanel Node.js App)
+| Key | Value |
+|---|---|
+| `DATABASE_URL` | `mysql://aqibmeh1_portfolio-site:TP%]g3}.1Tq8V[XQ@localhost:3306/aqibmeh1_portfolio-site` |
+| `NEXTAUTH_URL` | `https://aqibmehedi.com` |
+| `NEXTAUTH_SECRET` | `A9s8d7f6g5h4j3k2l1m0n9b8v7c6x5z4` |
+| `NODE_ENV` | `production` |
+
+---
+
+## 🗄️ Database
+- **Host:** `localhost:3306`
 - **User:** `aqibmeh1_portfolio-site`
 - **Database:** `aqibmeh1_portfolio-site`
 - **Password:** `TP%]g3}.1Tq8V[XQ`
+
+---
+
+## 📱 Next Phase: Flutter Mobile Admin App
+
+> **Phase 3** is the next major milestone — connecting this backend to a native Flutter application.
+
+**Goals:**
+- Real-time **Pusher notifications** on the phone when a new lead/contact arrives
+- Full **Mobile Admin Panel** — manage projects, blogs, and leads from anywhere
+- Mirror the web admin in Flutter with a premium mobile-native UI
+- On-the-go content management — add/edit projects, reply to leads, view visitor analytics
+
+See **`IMPLEMENTATION_PLAN.md`** for the full technical roadmap.
+
+---
+
+*Architected with precision by Antigravity AI & Aqib Mehedi.*
