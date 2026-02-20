@@ -1,4 +1,4 @@
-:HL["/_next/static/chunks/cbd69eb53ba0ab36.css","style"]
+:HL["/_next/static/chunks/227a316d68c23556.css","style"]
 :HL["/_next/static/media/1b99372b3eaef0c8-s.p.758e15a8.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/profile/aqib_mehedi.jpg","image"]
@@ -13,4 +13,4 @@
 :HL["/projects/homefoodz.png","image"]
 :HL["/projects/e-parking.jpg","image"]
 :HL["/projects/surveillance-robot.jpg","image"]
-0:{"buildId":"AK3qTPq05Ek3uxiUrYsJ6","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"best-ai-engineer-bangladesh","paramType":null,"paramKey":"best-ai-engineer-bangladesh","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+0:{"buildId":"j4ik0OnpcVZ9Nft9ihhh0","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"best-ai-engineer-bangladesh","paramType":null,"paramKey":"best-ai-engineer-bangladesh","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}

@@ -36,17 +36,22 @@ export default function WhatsAppButton() {
         <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-2">
             {/* Tooltip bubble */}
             {showTooltip && !dismissed && (
-                <div className="relative flex items-center gap-2 bg-white text-gray-800 text-sm font-medium px-4 py-2.5 rounded-2xl rounded-br-sm shadow-2xl max-w-[220px] animate-in slide-in-from-bottom-2 fade-in duration-300">
-                    <span>Let's talk on WhatsApp! 👋</span>
+                <div className="relative flex items-center gap-2 px-4 py-2.5 rounded-2xl rounded-br-sm shadow-2xl max-w-[230px] animate-in slide-in-from-bottom-2 fade-in duration-300 border border-brand-amber/30"
+                    style={{ background: "linear-gradient(135deg, #111 0%, #1a1500 100%)" }}>
+                    <span className="text-sm font-semibold text-white">Let&apos;s talk on <span className="text-brand-amber">WhatsApp!</span> 👋</span>
                     <button
                         onClick={() => { setShowTooltip(false); setDismissed(true); }}
-                        className="ml-1 text-gray-400 hover:text-gray-600 flex-shrink-0"
+                        className="ml-1 text-slate-500 hover:text-brand-amber flex-shrink-0 transition-colors"
                         aria-label="Dismiss"
                     >
-                        <X size={14} />
+                        <X size={13} />
                     </button>
+                    {/* Amber glow */}
+                    <div className="absolute inset-0 rounded-2xl rounded-br-sm pointer-events-none"
+                        style={{ boxShadow: "0 0 20px rgba(245,158,11,0.08)" }} />
                     {/* Tail */}
-                    <div className="absolute -bottom-2 right-4 w-0 h-0 border-l-8 border-l-transparent border-r-8 border-r-transparent border-t-8 border-t-white" />
+                    <div className="absolute -bottom-2 right-4 w-0 h-0 border-l-8 border-l-transparent border-r-8 border-r-transparent border-t-8"
+                        style={{ borderTopColor: "#1a1500" }} />
                 </div>
             )}
 
