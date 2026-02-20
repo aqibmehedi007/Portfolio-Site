@@ -8,11 +8,16 @@ import ModularPortfolio from "@/components/features/ModularPortfolio";
 import ProcessMap from "@/components/features/ProcessMap";
 
 import LeadCaptureSection from "@/components/features/Contact/LeadCaptureSection";
+import FaqSection from "@/components/features/FaqSection";
 import { prisma } from "@/core/prisma";
 
 export default async function Home() {
   const projects = await prisma.project.findMany({
     where: { featured: true },
+    orderBy: { orderIdx: "asc" }
+  });
+
+  const faqs = await prisma.faq.findMany({
     orderBy: { orderIdx: "asc" }
   });
 
@@ -69,6 +74,8 @@ export default async function Home() {
             <ModularPortfolio projects={projects} />
           </div>
         </section>
+
+        <FaqSection faqs={faqs} />
         <LeadCaptureSection />
       </main>
 
