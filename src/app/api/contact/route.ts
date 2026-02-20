@@ -19,7 +19,7 @@ export async function POST(req: Request) {
         const result = ContactSchema.parse(body);
 
         // Save lead to Database
-        const lead = await prisma.lead.create({ data: result });
+        await prisma.lead.create({ data: result });
 
         // Fetch DB Settings, Fallback to ENV if not configured
         const settings = await prisma.setting.findMany();

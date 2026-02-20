@@ -13,4 +13,4 @@
 :HL["/projects/homefoodz.png","image"]
 :HL["/projects/e-parking.jpg","image"]
 :HL["/projects/surveillance-robot.jpg","image"]
-0:{"buildId":"13Pd0wOHjAQSF5fYZIr8n","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+0:{"buildId":"KCvnruhLX70XTAQN1kAxA","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
