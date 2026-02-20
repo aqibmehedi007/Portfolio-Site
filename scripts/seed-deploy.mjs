@@ -108,46 +108,42 @@ async function main() {
         });
     }
 
-    console.log('Seeding Blog Categories...');
-    const techCategory = await prisma.blogCategory.upsert({
-        where: { slug: 'technology' },
-        update: {},
-        create: { name: 'Technology', slug: 'technology' },
-    });
+    console.log('Seeding Blogs from blogs.json...');
+    const blogsData = await readJSON('src/database/blogs.json');
 
-    const aiCategory = await prisma.blogCategory.upsert({
-        where: { slug: 'artificial-intelligence' },
-        update: {},
-        create: { name: 'Artificial Intelligence', slug: 'artificial-intelligence' },
-    });
-
-    console.log('Seeding Blog Posts...');
-    const posts = [
-        {
-            title: 'Optimizing Phi-3 for Edge Devices using ONNX',
-            slug: 'optimizing-phi-3-edge-onnx',
-            excerpt: 'A technical deep-dive into quantization and runtime optimization for Microsofts latest SLM.',
-            content: `# Optimizing Phi-3 for Edge Devices\n\nEdge computing is the new frontier for LLMs...`,
-            coverImage: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=2000',
-            categoryId: aiCategory.id,
-            published: true,
-        },
-        {
-            title: 'The Future of Flutter: WASM and Beyond',
-            slug: 'future-of-flutter-wasm',
-            excerpt: 'Why WebAssembly is changing the game for high-performance cross-platform web applications.',
-            content: `# Flutter + WASM\n\nFlutter's foray into WebAssembly (WASM) is a massive leap...`,
-            coverImage: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=2000',
-            categoryId: techCategory.id,
-            published: true,
-        }
-    ];
-
-    for (const post of posts) {
-        await prisma.blogPost.upsert({
-            where: { slug: post.slug },
+    for (const blog of blogsData) {
+        // Handle Category
+        const categorySlug = blog.category.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+        const category = await prisma.blogCategory.upsert({
+            where: { slug: categorySlug },
             update: {},
-            create: post,
+            create: {
+                name: blog.category,
+                slug: categorySlug,
+            },
+        });
+
+        // Handle Blog Post
+        await prisma.blogPost.upsert({
+            where: { slug: blog.slug },
+            update: {
+                title: blog.title,
+                excerpt: blog.excerpt,
+                content: blog.content,
+                coverImage: blog.coverImage,
+                categoryId: category.id,
+                published: true,
+            },
+            create: {
+                title: blog.title,
+                slug: blog.slug,
+                excerpt: blog.excerpt,
+                content: blog.content,
+                coverImage: blog.coverImage,
+                categoryId: category.id,
+                authorName: 'Aqib Mehedi',
+                published: true,
+            },
         });
     }
 
