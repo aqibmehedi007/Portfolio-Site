@@ -108,6 +108,49 @@ async function main() {
         });
     }
 
+    console.log('Seeding Blog Categories...');
+    const techCategory = await prisma.blogCategory.upsert({
+        where: { slug: 'technology' },
+        update: {},
+        create: { name: 'Technology', slug: 'technology' },
+    });
+
+    const aiCategory = await prisma.blogCategory.upsert({
+        where: { slug: 'artificial-intelligence' },
+        update: {},
+        create: { name: 'Artificial Intelligence', slug: 'artificial-intelligence' },
+    });
+
+    console.log('Seeding Blog Posts...');
+    const posts = [
+        {
+            title: 'Optimizing Phi-3 for Edge Devices using ONNX',
+            slug: 'optimizing-phi-3-edge-onnx',
+            excerpt: 'A technical deep-dive into quantization and runtime optimization for Microsofts latest SLM.',
+            content: `# Optimizing Phi-3 for Edge Devices\n\nEdge computing is the new frontier for LLMs...`,
+            coverImage: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=2000',
+            categoryId: aiCategory.id,
+            published: true,
+        },
+        {
+            title: 'The Future of Flutter: WASM and Beyond',
+            slug: 'future-of-flutter-wasm',
+            excerpt: 'Why WebAssembly is changing the game for high-performance cross-platform web applications.',
+            content: `# Flutter + WASM\n\nFlutter's foray into WebAssembly (WASM) is a massive leap...`,
+            coverImage: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=2000',
+            categoryId: techCategory.id,
+            published: true,
+        }
+    ];
+
+    for (const post of posts) {
+        await prisma.blogPost.upsert({
+            where: { slug: post.slug },
+            update: {},
+            create: post,
+        });
+    }
+
     console.log('✅ Seeding completed successfully!');
 }
 
