@@ -3,6 +3,10 @@
 import { prisma } from "@/core/prisma";
 import { revalidatePath } from "next/cache";
 
+function makeSlug(title: string): string {
+    return title.toLowerCase().replace(/[^a-z0-9\s]/g, "").trim().replace(/\s+/g, "-");
+}
+
 export async function deleteProject(id: string) {
     try {
         await prisma.project.delete({ where: { id } });
@@ -18,22 +22,38 @@ export async function deleteProject(id: string) {
 
 export async function upsertProject(data: any, id?: string) {
     try {
+        const { content, contentType, ...rest } = data;
+
         if (id) {
+            // On update: regenerate slug if title changed, preserve existing slug otherwise
+            const existing = await prisma.project.findUnique({ where: { id }, select: { slug: true, title: true } });
+            const newSlug = existing && existing.title !== rest.title
+                ? makeSlug(rest.title)
+                : existing?.slug;
+
             await prisma.project.update({
                 where: { id },
                 data: {
-                    ...data,
+                    ...rest,
+                    slug: newSlug || makeSlug(rest.title),
+                    content: content || null,
+                    contentType: contentType || "markdown",
                     updatedAt: new Date(),
                 }
             });
         } else {
+            const slug = makeSlug(rest.title);
             await prisma.project.create({
                 data: {
-                    ...data,
-                    orderIdx: await prisma.project.count(), // Put it at the end
+                    ...rest,
+                    slug,
+                    content: content || null,
+                    contentType: contentType || "markdown",
+                    orderIdx: await prisma.project.count(),
                 }
             });
         }
+
         revalidatePath('/');
         revalidatePath('/best-ai-engineer-bangladesh');
         revalidatePath('/admin/projects');
