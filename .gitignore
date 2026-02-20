@@ -41,6 +41,16 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
+# CPanel & Server Generated
+tmp/
+logs/
+*.log
+.npm/
+.passenger.log
+passenger.*.log
+node.app.log
+
+# next-env
 next-env.d.ts
 
 /src/generated/prisma
