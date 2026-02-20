@@ -13,4 +13,4 @@
 :HL["/projects/homefoodz.png","image"]
 :HL["/projects/e-parking.jpg","image"]
 :HL["/projects/surveillance-robot.jpg","image"]
-0:{"buildId":"j4ik0OnpcVZ9Nft9ihhh0","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"enterprise-ai-solutions-architect","paramType":null,"paramKey":"enterprise-ai-solutions-architect","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+0:{"buildId":"X_dd4uxOa-l2bLdlVJ8RH","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"enterprise-ai-solutions-architect","paramType":null,"paramKey":"enterprise-ai-solutions-architect","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}

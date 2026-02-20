@@ -1,13 +1,24 @@
 import { NextResponse } from 'next/server';
-import { Resend } from 'resend';
+import nodemailer from 'nodemailer';
 import { z } from 'zod';
 import { prisma } from '@/core/prisma';
 
-// Initialize Resend
-// We'll construct the key from your environment variable soon. 
-// For now, it will fail gracefully if it's not set.
-const resendKey = process.env.RESEND_API_KEY;
-const resend = resendKey ? new Resend(resendKey) : null;
+// Use env variables if present, fallback to provided defaults so it works out of the box
+const SMTP_HOST = process.env.SMTP_HOST || 'mail.aqibmehedi.com';
+const SMTP_PORT = parseInt(process.env.SMTP_PORT || '465', 10);
+const SMTP_USER = process.env.SMTP_USER || 'mr@aqibmehedi.com';
+const SMTP_PASS = process.env.SMTP_PASS || 'ACE@VICA.?9Tiv~V';
+
+// Configure Nodemailer transporter
+const transporter = nodemailer.createTransport({
+    host: SMTP_HOST,
+    port: SMTP_PORT,
+    secure: SMTP_PORT === 465, // true for 465, false for other ports
+    auth: {
+        user: SMTP_USER,
+        pass: SMTP_PASS,
+    },
+});
 
 const ContactSchema = z.object({
     name: z.string().min(2, "Name must be at least 2 characters."),
@@ -24,34 +35,52 @@ export async function POST(req: Request) {
         // Validate that the request matches our Zod Schema
         const result = ContactSchema.parse(body);
 
-        // Add database insertion logic here (Phase 2)
+        // Save lead to Database
         const lead = await prisma.lead.create({ data: result });
 
-        if (resend) {
-            // Send the email to you
-            await resend.emails.send({
-                from: 'Portfolio Contact <onboarding@resend.dev>', // You will verify your own domain later
-                to: process.env.CONTACT_EMAIL || 'me@example.com',
-                subject: `New Lead: ${result.service} - ${result.name}`,
-                text: `
+        // Email 1: Send notification to Admin (You)
+        await transporter.sendMail({
+            from: `"Portfolio Alerts" <${SMTP_USER}>`,
+            to: process.env.CONTACT_EMAIL || SMTP_USER, // Send to yourself
+            subject: `[New Lead] ${result.service} - ${result.name}`,
+            text: `
 Name: ${result.name}
 Email: ${result.email}
 Service: ${result.service}
-Budget Range: ${result.budget}
+Budget: ${result.budget}
 
 Message:
 ${result.message}
-        `,
-            });
+            `,
+            html: `
+<h2>New Lead from Portfolio</h2>
+<p><strong>Name:</strong> ${result.name}</p>
+<p><strong>Email:</strong> ${result.email}</p>
+<p><strong>Service:</strong> ${result.service}</p>
+<p><strong>Budget:</strong> ${result.budget}</p>
+<hr/>
+<p><strong>Message:</strong></p>
+<p>${result.message.replace(/\n/g, '<br/>')}</p>
+            `
+        });
 
-            // Send a confirmation email to the client
-            await resend.emails.send({
-                from: 'Aqib Mehedi <onboarding@resend.dev>', // You will verify your own domain later
-                to: result.email,
-                subject: `Received your inquiry: ${result.service}`,
-                text: `Hi ${result.name},\n\nThank you for reaching out regarding ${result.service}. I have received your message and will review your specifications shortly. I typically respond within 24-48 business hours to arrange an initial consultation.\n\nBest regards,\nAqib Mehedi\nSenior AI & Mobile Solutions Architect`,
-            });
-        }
+        // Email 2: Send Auto-Reply to the Client
+        await transporter.sendMail({
+            from: `"Aqib Mehedi" <${SMTP_USER}>`,
+            to: result.email,
+            subject: `Thank you for reaching out: ${result.service}`,
+            text: `Hi ${result.name},\n\nThank you for reaching out regarding ${result.service}. I have received your message and will review your specifications shortly. I typically respond within 24-48 business hours to arrange an initial consultation.\n\nBest regards,\nAqib Mehedi\nSenior AI & Mobile Solutions Architect`,
+            html: `
+<div style="font-family: sans-serif; line-height: 1.6; color: #333;">
+    <p>Hi ${result.name},</p>
+    <p>Thank you for reaching out regarding <strong>${result.service}</strong>.</p>
+    <p>I have received your message and will review your specifications shortly. I typically respond within 24-48 business hours to arrange an initial consultation.</p>
+    <br/>
+    <p>Best regards,</p>
+    <p><strong>Aqib Mehedi</strong><br/>Senior AI & Mobile Solutions Architect</p>
+</div>
+            `
+        });
 
         return NextResponse.json({ success: true, message: "Message sent successfully" });
 
@@ -62,7 +91,7 @@ ${result.message}
 
         console.error("Contact API Error:", error);
         return NextResponse.json(
-            { success: false, message: "Internal server error" },
+            { success: false, message: "Failed to send message. Please try again later." },
             { status: 500 }
         );
     }
