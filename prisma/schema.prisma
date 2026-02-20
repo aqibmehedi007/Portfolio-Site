@@ -145,3 +145,11 @@ model Visitor {
   
   @@index([ip])
 }
+
+model Setting {
+  id          String   @id @default(uuid())
+  key         String   @unique
+  value       String   @db.Text
+  description String?
+  updatedAt   DateTime @updatedAt
+}

@@ -3,23 +3,6 @@ import nodemailer from 'nodemailer';
 import { z } from 'zod';
 import { prisma } from '@/core/prisma';
 
-// Use env variables if present, fallback to provided defaults so it works out of the box
-const SMTP_HOST = process.env.SMTP_HOST || 'mail.aqibmehedi.com';
-const SMTP_PORT = parseInt(process.env.SMTP_PORT || '465', 10);
-const SMTP_USER = process.env.SMTP_USER || 'mr@aqibmehedi.com';
-const SMTP_PASS = process.env.SMTP_PASS || 'ACE@VICA.?9Tiv~V';
-
-// Configure Nodemailer transporter
-const transporter = nodemailer.createTransport({
-    host: SMTP_HOST,
-    port: SMTP_PORT,
-    secure: SMTP_PORT === 465, // true for 465, false for other ports
-    auth: {
-        user: SMTP_USER,
-        pass: SMTP_PASS,
-    },
-});
-
 const ContactSchema = z.object({
     name: z.string().min(2, "Name must be at least 2 characters."),
     email: z.string().email("Invalid email address."),
@@ -38,10 +21,34 @@ export async function POST(req: Request) {
         // Save lead to Database
         const lead = await prisma.lead.create({ data: result });
 
+        // Fetch DB Settings, Fallback to ENV if not configured
+        const settings = await prisma.setting.findMany();
+        const config = settings.reduce((acc: Record<string, string>, curr: { key: string; value: string }) => {
+            acc[curr.key] = curr.value;
+            return acc;
+        }, {} as Record<string, string>);
+
+        const SMTP_HOST = config.SMTP_HOST || process.env.SMTP_HOST || 'mail.aqibmehedi.com';
+        const SMTP_PORT = parseInt(config.SMTP_PORT || process.env.SMTP_PORT || '465', 10);
+        const SMTP_USER = config.SMTP_USER || process.env.SMTP_USER || 'mr@aqibmehedi.com';
+        const SMTP_PASS = config.SMTP_PASS || process.env.SMTP_PASS || 'ACE@VICA.?9Tiv~V';
+        const CONTACT_EMAIL = config.CONTACT_EMAIL || process.env.CONTACT_EMAIL || 'aqibcareer007@gmail.com';
+
+        // Configure Nodemailer transporter
+        const transporter = nodemailer.createTransport({
+            host: SMTP_HOST,
+            port: SMTP_PORT,
+            secure: SMTP_PORT === 465, // true for 465, false for other ports
+            auth: {
+                user: SMTP_USER,
+                pass: SMTP_PASS,
+            },
+        });
+
         // Email 1: Send notification to Admin (You)
         await transporter.sendMail({
             from: `"Portfolio Alerts" <${SMTP_USER}>`,
-            to: process.env.CONTACT_EMAIL || 'aqibcareer007@gmail.com', // Send to your primary inbox
+            to: CONTACT_EMAIL, // Send to your primary inbox
             subject: `[New Lead] ${result.service} - ${result.name}`,
             text: `
 Name: ${result.name}

@@ -4,6 +4,7 @@ import "./globals.css";
 import { SITE_CONFIG, SCHEMA_DATA } from "@/core/config";
 import VisitorTracker from "@/components/features/VisitorTracker";
 import WhatsAppButton from "@/components/features/WhatsAppButton";
+import { Toaster } from "react-hot-toast";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -69,6 +70,13 @@ export default function RootLayout({
         <VisitorTracker />
         <WhatsAppButton />
         {children}
+        <Toaster position="bottom-right" toastOptions={{
+          style: {
+            background: '#111',
+            color: '#fff',
+            border: '1px solid rgba(245, 158, 11, 0.2)',
+          },
+        }} />
       </body>
     </html>
   );

@@ -90,6 +90,12 @@
       "namedRegex": "^/admin/projects(?:/)?$"
     },
     {
+      "page": "/admin/settings",
+      "regex": "^/admin/settings(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/admin/settings(?:/)?$"
+    },
+    {
       "page": "/admin/visitors",
       "regex": "^/admin/visitors(?:/)?$",
       "routeKeys": {},

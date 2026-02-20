@@ -29,6 +29,21 @@
       },
       "filename": "src/app/admin/(dashboard)/projects/actions.ts",
       "exportedName": "upsertProject"
+    },
+    "40459ef081acc9dd532b64a4aab84722f5807fb601": {
+      "workers": {
+        "app/admin/(dashboard)/settings/page": {
+          "moduleId": 407074,
+          "async": false,
+          "exportedName": "saveSettings",
+          "filename": "src/app/admin/(dashboard)/settings/actions.ts"
+        }
+      },
+      "layer": {
+        "app/admin/(dashboard)/settings/page": "action-browser"
+      },
+      "filename": "src/app/admin/(dashboard)/settings/actions.ts",
+      "exportedName": "saveSettings"
     }
   },
   "edge": {},

@@ -4,6 +4,7 @@
   "/admin/(dashboard)/leads/page": "app/admin/(dashboard)/leads/page.js",
   "/admin/(dashboard)/page": "app/admin/(dashboard)/page.js",
   "/admin/(dashboard)/projects/page": "app/admin/(dashboard)/projects/page.js",
+  "/admin/(dashboard)/settings/page": "app/admin/(dashboard)/settings/page.js",
   "/admin/(dashboard)/visitors/page": "app/admin/(dashboard)/visitors/page.js",
   "/admin/login/page": "app/admin/login/page.js",
   "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js",

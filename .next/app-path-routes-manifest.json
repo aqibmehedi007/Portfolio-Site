@@ -4,6 +4,7 @@
   "/admin/(dashboard)/leads/page": "/admin/leads",
   "/admin/(dashboard)/page": "/admin",
   "/admin/(dashboard)/projects/page": "/admin/projects",
+  "/admin/(dashboard)/settings/page": "/admin/settings",
   "/admin/(dashboard)/visitors/page": "/admin/visitors",
   "/admin/login/page": "/admin/login",
   "/api/auth/[...nextauth]/route": "/api/auth/[...nextauth]",
