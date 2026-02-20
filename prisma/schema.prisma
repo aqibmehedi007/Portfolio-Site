@@ -28,6 +28,8 @@ model Project {
   slug        String   @unique @default("")
   category    String
   description String   @db.Text
+  content     String?  @db.LongText  // Rich content: markdown, html, or plain text
+  contentType String   @default("markdown") // "markdown" | "html" | "text"
   icon        String
   image       String
   video       String?  // Optional video URL

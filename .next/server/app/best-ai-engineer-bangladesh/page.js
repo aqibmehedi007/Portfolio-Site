@@ -15,5 +15,5 @@ R.c("server/chunks/ssr/node_modules_next_dist_client_components_9774470f._.js")
 R.c("server/chunks/ssr/node_modules_next_dist_client_components_builtin_forbidden_45780354.js")
 R.c("server/chunks/ssr/node_modules_next_dist_client_components_builtin_unauthorized_15817684.js")
 R.c("server/chunks/ssr/_next-internal_server_app_best-ai-engineer-bangladesh_page_actions_78086d16.js")
-R.m(67342)
-module.exports=R.m(67342).exports
+R.m(767342)
+module.exports=R.m(767342).exports

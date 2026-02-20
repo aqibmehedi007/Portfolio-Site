@@ -18,6 +18,8 @@ const ProjectSchema = z.object({
     link: z.string().url("Must be a valid URL").optional().or(z.literal("")),
     tags: z.string().min(1, "At least one tag is required"),
     featured: z.boolean(),
+    content: z.string().optional(),
+    contentType: z.string().optional(),
 });
 
 type ProjectFormValues = z.infer<typeof ProjectSchema>;
@@ -54,9 +56,12 @@ export default function ProjectForm({
             link: initialData.link || "",
             tags: (initialData.tags as string[]).join(", "),
             featured: initialData.featured,
+            content: (initialData as any).content || "",
+            contentType: ((initialData as any).contentType || "markdown") as "markdown" | "html" | "text",
         } : {
             featured: true,
-            icon: "Globe"
+            icon: "Globe",
+            contentType: "markdown" as const,
         }
     });
 
@@ -233,6 +238,32 @@ export default function ProjectForm({
                             />
                             {errors.video && <p className="text-red-400 text-xs mt-2">{errors.video.message}</p>}
                         </div>
+                    </div>
+
+                    {/* Content Editor */}
+                    <div className="space-y-3">
+                        <div className="flex items-center justify-between">
+                            <label className="block text-xs font-bold text-slate-500 uppercase tracking-widest">
+                                Project Content (Optional)
+                            </label>
+                            <select
+                                {...register("contentType")}
+                                className="bg-black/50 border border-white/10 rounded-lg px-3 py-1.5 text-white focus:outline-none focus:border-brand-amber text-xs transition-all"
+                            >
+                                <option value="markdown">📝 Markdown</option>
+                                <option value="html">🌐 Raw HTML</option>
+                                <option value="text">📄 Plain Text / Code</option>
+                            </select>
+                        </div>
+                        <textarea
+                            {...register("content")}
+                            rows={14}
+                            className="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-amber text-sm transition-all resize-y font-mono leading-relaxed"
+                            placeholder={`Write the detailed project breakdown here...\n\n# Architecture\nDescribe the system design...\n\n## Tech Stack\n- Next.js for frontend\n- Prisma ORM\n\n\`\`\`python\n# Example code block\nmodel = load_model('agri-llama')\n\`\`\``}
+                        />
+                        <p className="text-slate-600 text-xs">
+                            Supports GitHub Flavored Markdown — headings, code blocks, tables, bold, italic, links, and lists.
+                        </p>
                     </div>
 
                     <div>

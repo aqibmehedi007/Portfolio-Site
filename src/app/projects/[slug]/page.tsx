@@ -2,8 +2,9 @@ import { prisma } from "@/core/prisma";
 import { SITE_CONFIG } from "@/core/config";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, ArrowRight, ExternalLink, Tag, Layers, PlayCircle } from "lucide-react";
+import { ArrowLeft, ArrowRight, ExternalLink, Tag, Layers, PlayCircle, FileText } from "lucide-react";
 import * as Icons from "lucide-react";
+import ProjectContent from "@/components/features/ProjectContent";
 
 export const dynamic = "force-dynamic";
 
@@ -123,6 +124,20 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
                                     <video src={project.video!} controls className="w-full h-full object-contain" />
                                 </div>
                             )}
+                        </div>
+                    )}
+
+                    {/* Rich Content Section */}
+                    {project.content && (
+                        <div className="mb-16">
+                            <h2 className="text-2xl font-bold text-white mb-8 flex items-center gap-3">
+                                <FileText size={22} className="text-brand-amber" />
+                                Project Deep Dive
+                            </h2>
+                            <ProjectContent
+                                content={project.content}
+                                contentType={project.contentType}
+                            />
                         </div>
                     )}
 

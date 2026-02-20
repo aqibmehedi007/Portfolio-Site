@@ -4,5 +4,5 @@ R.c("server/chunks/node_modules_next_dist_esm_build_templates_app-route_f5680d9e
 R.c("server/chunks/node_modules_next_f2da0d3e._.js")
 R.c("server/chunks/[root-of-the-server]__24f8fcd9._.js")
 R.c("server/chunks/_next-internal_server_app_favicon_ico_route_actions_353150a5.js")
-R.m(32682)
-module.exports=R.m(32682).exports
+R.m(632682)
+module.exports=R.m(632682).exports
