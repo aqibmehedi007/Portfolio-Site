@@ -2,7 +2,7 @@ const { createServer } = require('http')
 const { parse } = require('url')
 const next = require('next')
 
-const dev = process.env.NODE_VALUE !== 'production'
+const dev = process.env.NODE_ENV === 'development'
 const app = next({ dev })
 const handle = app.getRequestHandler()
 
