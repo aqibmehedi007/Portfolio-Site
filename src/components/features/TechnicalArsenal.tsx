@@ -2,18 +2,18 @@
 
 import { Code2, Layers, Cloud, Cpu, ShieldCheck, Terminal } from "lucide-react";
 
-interface Skill {
+interface TechArsenalItem {
     id: string;
     title: string;
     description: string;
+    items: any;
+    size: string;
     icon: string;
-    skills: any;
-    color?: string;
-    size?: string;
+    color: string;
 }
 
 interface Props {
-    skills: Skill[];
+    arsenal: TechArsenalItem[];
 }
 
 const ICON_MAP: Record<string, any> = {
@@ -34,14 +34,14 @@ const COLOR_MAP: Record<string, string> = {
     cyan: "text-cyan-400 border-cyan-400/20 bg-cyan-400/5"
 };
 
-export default function TechnicalArsenal({ skills }: Props) {
+export default function TechnicalArsenal({ arsenal }: Props) {
     return (
         <section id="arsenal" className="py-32 bg-black relative overflow-hidden">
             {/* Background noise/grid */}
             <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.03] pointer-events-none" />
 
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                <div className="mb-20">
+                <div className="mb-14">
                     <div className="flex items-center gap-3 mb-6">
                         <div className="h-px w-12 bg-brand-amber" />
                         <span className="text-brand-amber font-bold tracking-[0.3em] uppercase text-xs">Technical Inventory</span>
@@ -54,38 +54,38 @@ export default function TechnicalArsenal({ skills }: Props) {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-6 auto-rows-[220px]">
-                    {skills.map((box, idx) => {
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[150px]">
+                    {arsenal.map((box, idx) => {
                         const Icon = ICON_MAP[box.icon] || Code2;
-                        const colors = COLOR_MAP[box.color || "amber"] || COLOR_MAP.amber;
+                        const colors = COLOR_MAP[box.color] || COLOR_MAP.amber;
 
                         return (
                             <div
-                                key={idx}
-                                className={`group relative glass-card p-10 flex flex-col justify-between border border-white/5 hover:border-white/10 transition-all duration-700 hover:bg-white/[0.03] overflow-hidden ${box.size || "col-span-1"}`}
+                                key={box.id}
+                                className={`group relative glass-card p-5 flex flex-col justify-between border border-white/5 hover:border-white/10 transition-all duration-700 hover:bg-white/[0.03] overflow-hidden ${box.size || "col-span-1"}`}
                             >
                                 {/* Decorative Large Icon */}
-                                <div className="absolute -top-10 -right-10 opacity-[0.03] group-hover:opacity-[0.08] group-hover:scale-110 group-hover:-rotate-12 transition-all duration-1000">
-                                    <Icon size={180} strokeWidth={1} />
+                                <div className="absolute -top-6 -right-6 opacity-[0.03] group-hover:opacity-[0.08] group-hover:scale-110 group-hover:-rotate-12 transition-all duration-1000">
+                                    <Icon size={120} strokeWidth={1} />
                                 </div>
 
                                 <div className="relative z-10">
-                                    <div className={`inline-flex p-3 rounded-xl ${colors} mb-6 transition-transform group-hover:scale-110 duration-500`}>
-                                        <Icon size={24} />
+                                    <div className={`inline-flex p-2 rounded-lg ${colors} mb-3 transition-transform group-hover:scale-110 duration-500`}>
+                                        <Icon size={18} />
                                     </div>
-                                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-brand-amber transition-colors">
+                                    <h3 className="text-base font-bold text-white mb-1 group-hover:text-brand-amber transition-colors">
                                         {box.title}
                                     </h3>
-                                    <p className="text-sm text-slate-500 leading-relaxed mb-6 font-medium">
+                                    <p className="text-xs text-slate-500 leading-snug font-medium">
                                         {box.description}
                                     </p>
                                 </div>
 
-                                <div className="relative z-10 flex flex-wrap gap-2 mt-auto">
-                                    {(box.skills as string[]).map((item: string, i: number) => (
+                                <div className="relative z-10 flex flex-wrap gap-1.5 mt-auto">
+                                    {(box.items as string[]).map((item: string, i: number) => (
                                         <div
                                             key={i}
-                                            className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/5 text-[10px] font-bold text-slate-400 group-hover:text-slate-100 transition-all group-hover:bg-white/10 group-hover:border-white/10"
+                                            className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/5 border border-white/5 text-[9px] font-bold text-slate-400 group-hover:text-slate-100 transition-all group-hover:bg-white/10 group-hover:border-white/10"
                                         >
                                             <div className="w-1 h-1 rounded-full bg-slate-600 group-hover:bg-brand-amber transition-colors" />
                                             {item}
@@ -103,3 +103,4 @@ export default function TechnicalArsenal({ skills }: Props) {
         </section>
     );
 }
+

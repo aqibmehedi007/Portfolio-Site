@@ -1,19 +1,19 @@
 {
   "node": {
-    "40f9f13dcfcaa9a00e17852211d27ca0c0e8eb64e3": {
+    "408a3a6a38d5f6e6a76d4f7d464db4835a93e420b5": {
       "workers": {
         "app/admin/(dashboard)/settings/page": {
-          "moduleId": 5108,
+          "moduleId": 407074,
           "async": false,
           "exportedName": "saveSettings",
-          "filename": "GitHub/Portfolio-Site/src/app/admin/(dashboard)/settings/actions.ts"
+          "filename": "src/app/admin/(dashboard)/settings/actions.ts"
         }
       },
       "layer": {
         "app/admin/(dashboard)/settings/page": "action-browser"
       },
       "exportedName": "saveSettings",
-      "filename": "GitHub/Portfolio-Site/src/app/admin/(dashboard)/settings/actions.ts"
+      "filename": "src/app/admin/(dashboard)/settings/actions.ts"
     }
   },
   "edge": {}

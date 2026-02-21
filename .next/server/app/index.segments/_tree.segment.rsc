@@ -1,4 +1,4 @@
-:HL["/_next/static/chunks/996517cb5051fd1c.css","style"]
+:HL["/_next/static/chunks/0a488fb75ba4dade.css","style"]
 :HL["/_next/static/media/1b99372b3eaef0c8-s.p.758e15a8.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/profile/aqib_mehedi.jpg","image"]
@@ -13,4 +13,4 @@
 :HL["/projects/homefoodz.png","image"]
 :HL["/projects/e-parking.jpg","image"]
 :HL["/projects/surveillance-robot.jpg","image"]
-0:{"buildId":"eef3NL2hn8IRLuMi71U_J","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+0:{"buildId":"uExAjFNJanMfWdkKDRU1S","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":true},"staleTime":300}

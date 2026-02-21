@@ -90,6 +90,19 @@ model ProcessStep {
   updatedAt   DateTime @updatedAt
 }
 
+model TechArsenal {
+  id          String   @id @default(uuid())
+  title       String
+  description String
+  items       Json     // Array of skill/tech strings
+  size        String   @default("md:col-span-1") // Grid span class for staggered layout
+  icon        String
+  color       String   @default("amber") // Color theme: amber, blue, emerald, purple, rose, cyan
+  orderIdx    Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
 model Showcase {
   id          String   @id @default(uuid())
   showcaseId  String   @unique // 'krishok-ai', 'echo-ai', etc

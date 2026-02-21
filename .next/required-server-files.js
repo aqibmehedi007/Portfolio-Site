@@ -100,7 +100,7 @@ self.__SERVER_FILES_MANIFEST={
         "transform": "lodash/{{member}}"
       }
     },
-    "outputFileTracingRoot": "D:\\",
+    "outputFileTracingRoot": "D:\\GitHub\\Portfolio-Site",
     "cacheComponents": false,
     "cacheLife": {
       "default": {
@@ -293,12 +293,12 @@ self.__SERVER_FILES_MANIFEST={
     "bundlePagesRouterDependencies": false,
     "configFileName": "next.config.mjs",
     "turbopack": {
-      "root": "D:\\"
+      "root": "D:\\GitHub\\Portfolio-Site"
     },
     "distDirRoot": ".next"
   },
   "appDir": "D:\\GitHub\\Portfolio-Site",
-  "relativeAppDir": "GitHub\\Portfolio-Site",
+  "relativeAppDir": "",
   "files": [
     ".next\\routes-manifest.json",
     ".next\\server\\pages-manifest.json",

@@ -21,7 +21,7 @@ export default async function Home() {
     orderBy: { orderIdx: "asc" }
   });
 
-  const skills = await prisma.skill.findMany({
+  const techArsenal = await prisma.techArsenal.findMany({
     orderBy: { orderIdx: "asc" }
   });
 
@@ -68,7 +68,7 @@ export default async function Home() {
       <main className="flex-1">
         <Hero />
         <TechAuthority />
-        <TechnicalArsenal skills={skills} />
+        <TechnicalArsenal arsenal={techArsenal} />
         <MediaShowcase />
         <ProcessMap processSteps={processSteps} />
 
