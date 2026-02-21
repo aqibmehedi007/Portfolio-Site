@@ -150,6 +150,51 @@
       "filename": "src/app/admin/(dashboard)/content/actions.ts",
       "exportedName": "deleteProcess"
     },
+    "40fa1d3dd026a1a631788505407508f37418c458f0": {
+      "workers": {
+        "app/admin/(dashboard)/content/page": {
+          "moduleId": 325655,
+          "async": false,
+          "exportedName": "addTechArsenal",
+          "filename": "src/app/admin/(dashboard)/content/actions.ts"
+        }
+      },
+      "layer": {
+        "app/admin/(dashboard)/content/page": "action-browser"
+      },
+      "filename": "src/app/admin/(dashboard)/content/actions.ts",
+      "exportedName": "addTechArsenal"
+    },
+    "6005dc7c0a84589c23ff399ebf19111da50287348a": {
+      "workers": {
+        "app/admin/(dashboard)/content/page": {
+          "moduleId": 325655,
+          "async": false,
+          "exportedName": "updateTechArsenal",
+          "filename": "src/app/admin/(dashboard)/content/actions.ts"
+        }
+      },
+      "layer": {
+        "app/admin/(dashboard)/content/page": "action-browser"
+      },
+      "filename": "src/app/admin/(dashboard)/content/actions.ts",
+      "exportedName": "updateTechArsenal"
+    },
+    "40263baa8d3d73dc7996a6b5f9d680d98d85eee36e": {
+      "workers": {
+        "app/admin/(dashboard)/content/page": {
+          "moduleId": 325655,
+          "async": false,
+          "exportedName": "deleteTechArsenal",
+          "filename": "src/app/admin/(dashboard)/content/actions.ts"
+        }
+      },
+      "layer": {
+        "app/admin/(dashboard)/content/page": "action-browser"
+      },
+      "filename": "src/app/admin/(dashboard)/content/actions.ts",
+      "exportedName": "deleteTechArsenal"
+    },
     "402c2c9ab33ded2ae8dcb720e2bb6b7b5ad4bd042b": {
       "workers": {
         "app/admin/(dashboard)/projects/page": {

@@ -107,3 +107,68 @@ export async function deleteSkill(id: string) {
     }
 }
 
+// ─── Tech Arsenal Actions ────────────────────────────────────
+
+export async function addTechArsenal(data: FormData) {
+    try {
+        const title = data.get("title") as string;
+        const description = data.get("description") as string;
+        const icon = data.get("icon") as string;
+        const color = data.get("color") as string;
+        const size = data.get("size") as string;
+        const itemsList = data.get("itemsList") as string;
+
+        if (!title || !description || !itemsList) return { error: "All fields are required" };
+
+        const items = itemsList.split(',').map(s => s.trim()).filter(Boolean);
+        const count = await prisma.techArsenal.count();
+
+        await prisma.techArsenal.create({
+            data: { title, description, icon, color, size, items, orderIdx: count }
+        });
+
+        revalidatePath('/');
+        revalidatePath('/admin/content');
+        return { success: true };
+    } catch (e) {
+        return { error: "Failed to add Tech Arsenal category" };
+    }
+}
+
+export async function updateTechArsenal(id: string, data: FormData) {
+    try {
+        const title = data.get("title") as string;
+        const description = data.get("description") as string;
+        const icon = data.get("icon") as string;
+        const color = data.get("color") as string;
+        const size = data.get("size") as string;
+        const itemsList = data.get("itemsList") as string;
+
+        if (!title || !description || !itemsList) return { error: "All fields are required" };
+
+        const items = itemsList.split(',').map(s => s.trim()).filter(Boolean);
+
+        await prisma.techArsenal.update({
+            where: { id },
+            data: { title, description, icon, color, size, items }
+        });
+
+        revalidatePath('/');
+        revalidatePath('/admin/content');
+        return { success: true };
+    } catch (e) {
+        return { error: "Failed to update" };
+    }
+}
+
+export async function deleteTechArsenal(id: string) {
+    try {
+        await prisma.techArsenal.delete({ where: { id } });
+        revalidatePath('/');
+        revalidatePath('/admin/content');
+        return { success: true };
+    } catch (e) {
+        return { error: "Failed to delete" };
+    }
+}
+
