@@ -19,8 +19,22 @@ export async function POST(req: Request) {
         const result = ContactSchema.parse(body);
 
         // Save lead to Database
-        await prisma.lead.create({ data: result });
+        const lead = await prisma.lead.create({ data: result });
 
+        // Trigger real-time mobile notification via Pusher
+        if (process.env.PUSHER_APP_ID) {
+            try {
+                const { pusherServer } = await import('@/core/pusher');
+                await pusherServer.trigger('private-admin-channel', 'new-lead', {
+                    id: lead.id,
+                    name: lead.name,
+                    service: lead.service,
+                    budget: lead.budget
+                });
+            } catch (err) {
+                console.error('Pusher trigger failed:', err);
+            }
+        }
         // Fetch DB Settings, Fallback to ENV if not configured
         const settings = await prisma.setting.findMany();
         const config = settings.reduce((acc: Record<string, string>, curr: { key: string; value: string }) => {
