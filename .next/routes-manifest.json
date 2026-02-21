@@ -38,6 +38,22 @@
       "namedRegex": "^/api/auth/(?<nxtPnextauth>.+?)(?:/)?$"
     },
     {
+      "page": "/api/mobile/leads/[id]",
+      "regex": "^/api/mobile/leads/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/api/mobile/leads/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/api/mobile/projects/[id]",
+      "regex": "^/api/mobile/projects/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/api/mobile/projects/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
       "page": "/blog/[slug]",
       "regex": "^/blog/([^/]+?)(?:/)?$",
       "routeKeys": {
@@ -138,6 +154,42 @@
       "regex": "^/api/contact(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/api/contact(?:/)?$"
+    },
+    {
+      "page": "/api/mobile/auth",
+      "regex": "^/api/mobile/auth(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/mobile/auth(?:/)?$"
+    },
+    {
+      "page": "/api/mobile/blogs",
+      "regex": "^/api/mobile/blogs(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/mobile/blogs(?:/)?$"
+    },
+    {
+      "page": "/api/mobile/dashboard",
+      "regex": "^/api/mobile/dashboard(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/mobile/dashboard(?:/)?$"
+    },
+    {
+      "page": "/api/mobile/leads",
+      "regex": "^/api/mobile/leads(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/mobile/leads(?:/)?$"
+    },
+    {
+      "page": "/api/mobile/projects",
+      "regex": "^/api/mobile/projects(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/mobile/projects(?:/)?$"
+    },
+    {
+      "page": "/api/mobile/visitors",
+      "regex": "^/api/mobile/visitors(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/mobile/visitors(?:/)?$"
     },
     {
       "page": "/api/track",

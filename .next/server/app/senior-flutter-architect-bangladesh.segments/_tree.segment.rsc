@@ -13,4 +13,4 @@
 :HL["/projects/homefoodz.png","image"]
 :HL["/projects/e-parking.jpg","image"]
 :HL["/projects/surveillance-robot.jpg","image"]
-0:{"buildId":"pjCTyCZx1a8FpaNri9YV-","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"senior-flutter-architect-bangladesh","paramType":null,"paramKey":"senior-flutter-architect-bangladesh","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
+0:{"buildId":"qu3loD2IvwQxuV24uTsjy","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"senior-flutter-architect-bangladesh","paramType":null,"paramKey":"senior-flutter-architect-bangladesh","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
