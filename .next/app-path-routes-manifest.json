@@ -22,6 +22,7 @@
   "/api/mobile/projects/[id]/route": "/api/mobile/projects/[id]",
   "/api/mobile/projects/route": "/api/mobile/projects",
   "/api/mobile/visitors/route": "/api/mobile/visitors",
+  "/api/pusher/auth/route": "/api/pusher/auth",
   "/api/track/route": "/api/track",
   "/api/upload/route": "/api/upload",
   "/best-ai-engineer-bangladesh/page": "/best-ai-engineer-bangladesh",

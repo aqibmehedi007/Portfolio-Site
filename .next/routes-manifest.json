@@ -192,6 +192,12 @@
       "namedRegex": "^/api/mobile/visitors(?:/)?$"
     },
     {
+      "page": "/api/pusher/auth",
+      "regex": "^/api/pusher/auth(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/pusher/auth(?:/)?$"
+    },
+    {
       "page": "/api/track",
       "regex": "^/api/track(?:/)?$",
       "routeKeys": {},

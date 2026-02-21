@@ -22,6 +22,7 @@
   "/api/mobile/projects/[id]/route": "app/api/mobile/projects/[id]/route.js",
   "/api/mobile/projects/route": "app/api/mobile/projects/route.js",
   "/api/mobile/visitors/route": "app/api/mobile/visitors/route.js",
+  "/api/pusher/auth/route": "app/api/pusher/auth/route.js",
   "/api/track/route": "app/api/track/route.js",
   "/api/upload/route": "app/api/upload/route.js",
   "/best-ai-engineer-bangladesh/page": "app/best-ai-engineer-bangladesh/page.js",
