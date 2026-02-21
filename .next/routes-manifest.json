@@ -38,6 +38,14 @@
       "namedRegex": "^/api/auth/(?<nxtPnextauth>.+?)(?:/)?$"
     },
     {
+      "page": "/api/mobile/blogs/[id]",
+      "regex": "^/api/mobile/blogs/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/api/mobile/blogs/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
       "page": "/api/mobile/leads/[id]",
       "regex": "^/api/mobile/leads/([^/]+?)(?:/)?$",
       "routeKeys": {
@@ -46,12 +54,36 @@
       "namedRegex": "^/api/mobile/leads/(?<nxtPid>[^/]+?)(?:/)?$"
     },
     {
+      "page": "/api/mobile/process-steps/[id]",
+      "regex": "^/api/mobile/process\\-steps/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/api/mobile/process\\-steps/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
       "page": "/api/mobile/projects/[id]",
       "regex": "^/api/mobile/projects/([^/]+?)(?:/)?$",
       "routeKeys": {
         "nxtPid": "nxtPid"
       },
       "namedRegex": "^/api/mobile/projects/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/api/mobile/skills/[id]",
+      "regex": "^/api/mobile/skills/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/api/mobile/skills/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/api/mobile/tech-arsenal/[id]",
+      "regex": "^/api/mobile/tech\\-arsenal/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/api/mobile/tech\\-arsenal/(?<nxtPid>[^/]+?)(?:/)?$"
     },
     {
       "page": "/blog/[slug]",
@@ -180,10 +212,28 @@
       "namedRegex": "^/api/mobile/leads(?:/)?$"
     },
     {
+      "page": "/api/mobile/process-steps",
+      "regex": "^/api/mobile/process\\-steps(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/mobile/process\\-steps(?:/)?$"
+    },
+    {
       "page": "/api/mobile/projects",
       "regex": "^/api/mobile/projects(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/api/mobile/projects(?:/)?$"
+    },
+    {
+      "page": "/api/mobile/skills",
+      "regex": "^/api/mobile/skills(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/mobile/skills(?:/)?$"
+    },
+    {
+      "page": "/api/mobile/tech-arsenal",
+      "regex": "^/api/mobile/tech\\-arsenal(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/mobile/tech\\-arsenal(?:/)?$"
     },
     {
       "page": "/api/mobile/visitors",

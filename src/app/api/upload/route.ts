@@ -1,8 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
 import { writeFile, mkdir } from "fs/promises";
 import path from "path";
+import { authenticateMobileRequest, unauthorizedResponse } from "@/core/mobile-auth";
 
 export async function POST(req: NextRequest) {
+    const auth = authenticateMobileRequest(req);
+    if (!auth) return unauthorizedResponse();
+
     try {
         const formData = await req.formData();
         const file = formData.get("file") as File;
