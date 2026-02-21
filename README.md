@@ -1,6 +1,6 @@
 # Aqib Mehedi — AI Architect Portfolio & Ecosystem
 
-**Live:** [aqibmehedi.com](https://aqibmehedi.com) · **Stack:** Next.js 16 · Prisma 5.22 · MySQL · Node.js · Flutter
+**Live:** [aqibmehedi.com](https://aqibmehedi.com) · **Stack:** Next.js 15 · Prisma 6 · MySQL · Node.js · Flutter
 
 The most technically advanced personal brand ecosystem by an AI/Flutter Architect in Bangladesh, engineered to dominate search rankings for high-intent keywords.
 
@@ -9,7 +9,7 @@ The most technically advanced personal brand ecosystem by an AI/Flutter Architec
 ## 🏗 Ecosystem Architecture
 
 ```
-aqibmehedi.com (Next.js 16 — Node.js)
+aqibmehedi.com (Next.js 15 — Node.js)
 │
 ├── Web Frontend (React 19 / Tailwind CSS 4)
 │   ├── Hero, Bento Grid (Arsenal), Project Showcase
@@ -25,7 +25,8 @@ aqibmehedi.com (Next.js 16 — Node.js)
 │
 ├── 📱 Mobile Admin (Flutter — Android/iOS)
 │   ├── Real-time Pusher Notifications for new leads
-│   ├── Full CRUD for Projects, Blogs, and Leads
+│   ├── Full CRUD for Projects, Blogs, Skills, & Tech Arsenal
+│   ├── Rich Content Support (Markdown/HTML Preview)
 │   └── Mobile-native Visitor Analytics
 │
 ├── Backend (Next.js API Routes)
@@ -44,18 +45,16 @@ aqibmehedi.com (Next.js 16 — Node.js)
 ## 🛠 Tech Stack & Versions
 
 ### Backend & Web
-- **Framework:** Next.js 16.1.6
-- **UI & Logic:** React 19.2.3
+- **Framework:** Next.js 15.1.7 (Stable)
+- **UI & Logic:** React 19.0.0
 - **Styling:** Tailwind CSS 4.0
-- **Database:** MySQL via Prisma 5.22.0
+- **Database:** MySQL via Prisma 6.2.1
 - **Real-time:** Pusher 5.3.2
 - **Auth:** Next-Auth 4.24 & JWT 9.0.3
-- **Validation:** Zod 4.3.6
 
 ### Mobile (Eidos Admin)
 - **Framework:** Flutter 3.24+
-- **State:** Riverpod 2.5.1
-- **Networking:** Dio 5.4.3 & Http 1.2.2
+- **Rich Content:** flutter_markdown
 - **Real-time:** Pusher Channels 2.6.0
 - **Notifications:** Flutter Local Notifications 19.5.0
 
