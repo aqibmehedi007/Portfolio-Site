@@ -3,7 +3,7 @@ import { authenticateMobileRequest, unauthorizedResponse } from "@/core/mobile-a
 import { pusherServer } from "@/core/pusher";
 
 export async function POST(req: NextRequest) {
-    const auth = authenticateMobileRequest(req);
+    const auth = await authenticateMobileRequest(req);
     // If it's a mobile request, we authenticate it through our JWT mobile-auth
     // Or it could be a web admin request which uses NextAuth. We'll support mobile auth here first
     if (!auth) {
